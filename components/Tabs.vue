@@ -31,7 +31,6 @@
 
                                 <template v-if="tab.notification_message">
                                     <div class="notification-message">
-                                        <span class="icon">—</span>
                                         <div class="title" v-html="tab.notification_message"></div>
                                     </div>
                                 </template>
@@ -94,10 +93,10 @@ export default {
 
     .main-title {
         color: #000000;
-        font-size: 60px;
+        font-size: 46px;
         font-weight: 400;
         line-height: 1.3em;
-        margin: 40px 0 90px;
+        margin: 40px 0 80px;
 
         .colored {
             color: #0D8CE9;
@@ -132,8 +131,8 @@ export default {
         padding: 13px;
         border-radius: 30px;
         color: #000;
-        font-size: 20px;
-        line-height: 1.4em;
+        font-size: 18px;
+        line-height: 1.3em;
         transition: .3s;
 
         &:hover {
@@ -160,12 +159,12 @@ export default {
         font-weight: 700;
     }
     .tab-indicator {
-        width: 17px;
-        height: 17px;
+        width: 14px;
+        height: 14px;
         background: #0D8CE9;
         position: absolute;
         display: block;
-        right: -22px;
+        right: -20px;
         top: 0;
         transition: .45s;
 
@@ -199,15 +198,15 @@ export default {
             z-index: -1;
         }
         h3.title {
-            font-size: 40px;
+            font-size: 32px;
             line-height: 1.3em;
             font-weight: 400;
         }
         .content {
             padding-right: 20%;
-            margin-top: 50px;
+            margin-top: 40px;
             color: #000000;
-            font-size: 24px;
+            font-size: 21px;
             line-height: 1.3em;
 
             &.after {
@@ -217,7 +216,7 @@ export default {
         }
 
         .content + .notification {
-            margin-top: 45px;
+            margin-top: 25px;
         }
 
         .carousel {
@@ -243,14 +242,14 @@ export default {
                 .title {
                     color: #fff;
                     font-weight: bold;
-                    font-size: 60px;
+                    font-size: 42px;
                     line-height: 1.4em;
                     text-align: left;
                 }
                 .subtitle {
                     color: #3F3F3F;
                     font-weight: 600;
-                    font-size: 40px;
+                    font-size: 28px;
                     line-height: 1.3em;
                     text-align: left;
                 }
@@ -262,13 +261,13 @@ export default {
                     .name {
                         color: #fff;
                         font-weight: 600;
-                        font-size: 40px;
+                        font-size: 28px;
                         line-height: 1.3em;
                     }
                     .link {
                         color: #3F3F3F;
                         font-weight: 600;
-                        font-size: 24px;
+                        font-size: 21px;
                         line-height: 1.3em;
                     }
                 }
@@ -276,7 +275,7 @@ export default {
                     width: 70%;
                     padding-right: 0;
                     margin-top: 20px;
-                    font-size: 24px;
+                    font-size: 21px;
                     line-height: 1.3em;
                     text-align: justify;
                     color: #232323;
@@ -313,12 +312,12 @@ export default {
         .notification-message {
             display: flex;
             align-items: center;
-            margin: 55px 0 40px;
+            margin: 40px 0 30px;
 
             .title {
                 font-weight: 500;
-                font-size: 19px;
-                line-height: 24px;
+                font-size: 18px;
+                line-height: 1.4em;
                 color: #000000;
             }
 
@@ -345,7 +344,7 @@ export default {
             border-radius: 15px;
 
             .message {
-                font-size: 22px;
+                font-size: 18px;
                 line-height: 1.4em;
                 color: #000000;
             }
@@ -357,21 +356,21 @@ export default {
                 margin-bottom: 10px;
 
                 .icon {
-                    max-width: 46px;
+                    max-width: 38px;
                     width: 100%;
-                    height: 46px;
+                    height: 38px;
                     border-radius: 100%;
                     margin-right: 15px;
                 }
                 .title {
                     font-weight: 500;
-                    font-size: 24px;
+                    font-size: 21px;
                     line-height: 1.3em;
                     color: #000000;
                 }
                 .source {
                     color: #707070;
-                    font-size: 21px;
+                    font-size: 16px;
                     line-height: 1.4em;
                     margin-left: auto;
                     margin-right: 0;

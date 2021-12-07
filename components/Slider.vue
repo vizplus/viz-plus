@@ -64,7 +64,7 @@ export default {
     overflow: hidden;
 
     .after {
-        font-size: 19px;
+        font-size: 18px;
         line-height: 1.2em;
         color: #fff;
         position: absolute;
@@ -73,12 +73,12 @@ export default {
     }
     @media all and (max-width: 1550px) {
         .after {
-            font-size: 24px;
-            bottom: -70px;
+            font-size: 20px;
+            bottom: -80px;
         }
     }
     .main-title {
-        font-size: 60px;
+        font-size: 46px;
         line-height: 1.3em;
         color: #000000;
         margin-bottom: 40px;
@@ -172,7 +172,7 @@ export default {
             position: relative;
 
             .title {
-                font-size: 40px;
+                font-size: 34px;
                 line-height: 1.2em;
                 color: #000000;
 
@@ -181,7 +181,7 @@ export default {
                 }
             }
             .subtitle {
-                font-size: 24px;
+                font-size: 21px;
                 line-height: 1.2em;
                 color: #000000;
                 margin-top: 15px;

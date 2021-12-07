@@ -103,7 +103,7 @@ export default {
         targets: el,
         opacity: [0, 1],
         top: ['-100%', 0],
-        duration: 750,
+        duration: 900,
         easing: 'easeInOutSine',
         complete: done
       })
@@ -114,7 +114,7 @@ export default {
         targets: el,
         opacity: [1, 0],
         top: [0, '100%'],
-        duration: 750,
+        duration: 0,
         easing: 'easeInOutSine',
         complete: done
       })
@@ -140,7 +140,7 @@ body {
     height: 66px;
   }
   .lang-switch {
-    font-size: 24px;
+    font-size: 21px;
     line-height: 1.2em;
     
     a {
@@ -156,21 +156,21 @@ body {
 }
 
 .entry-slide {
-  padding: 100px 0 80px;
+  padding: 80px 0 100px;
   background: url(~~/assets/images/bg-entry.png) no-repeat top right;
 
   .col {
     padding-left: 40px;
   }
   .title {
-    font-size: 54px;
+    font-size: 46px;
     line-height: 1.3em;
     font-weight: 500;
     color: $main-color;
     margin: 0;
   }
   .subtitle {
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1.3em;
     font-weight: 400;
     color: $primary-color;
@@ -179,50 +179,52 @@ body {
   .button-group {
 
     .btn {
-      min-height: 70px;
+      min-height: 60px;
       text-align: center;
-      font-size: 24px;
+      font-size: 21px;
       line-height: 1.2em;
       color: $primary-color;
       border: 1px solid $primary-color;
       border-radius: 5px;
       padding: 5px 15px 10px;
 
-      &.arrow img {max-height: 11px; margin-top: 12px;}
-      &.arrows img {max-height: 17px}
+      &.arrow img {max-height: 10px; margin-top: 12px;}
+      &.arrows img {max-height: 16px}
       img {
         display: block;
         position: relative;
-        width: 66px;
+        width: 57px;
         margin: 8px auto 0;
       }
     }
 
     .btn + .btn {
-      margin-left: 10px;
+      margin-left: 20px;
     }
   }
 }
 
 .advantages {
-  padding: 60px 0 80px;
+  padding: 50px 0 60px;
 
   .title {
     color: $main-color;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
     line-height: 1.2em;
   }
   .subtitle {
+    margin-top: 5px;
     color: $primary-color;
-    font-size: 25px;
+    font-size: 21px;
     line-height: 1.3em;
+    padding-right: 6.5%;
   }
 }
 
 .footer {
   margin-top: 40px;
-  padding: 80px 60px 30px;
+  padding: 90px 60px 30px;
   display: flex;
   align-items: flex-end;
   background: url(~~/assets/images/footer-bg.svg) no-repeat top center;
@@ -236,7 +238,7 @@ body {
   .link {
     color: #fff;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 21px;
     line-height: 1.3em;
     border-bottom: 1px solid #fff;
     transition: .2s;
@@ -256,7 +258,7 @@ body {
     color: #fff;
     opacity: .5;
     font-weight: bold;
-    font-size: 98px;
+    font-size: 92px;
     line-height: 1.4rem;
   }
 }
