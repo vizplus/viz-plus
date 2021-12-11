@@ -1,5 +1,5 @@
 <template>
-    <section class="tabs">
+    <section class="tabs" id="guide">
         <b-container>
             <b-row>
                 <b-col>
@@ -91,6 +91,8 @@ export default {
 .tabs {
     margin-bottom: 40px;
 
+    .row {flex-wrap: nowrap;}
+
     .main-title {
         color: #000000;
         font-size: 46px;
@@ -105,7 +107,7 @@ export default {
 
     .col-auto {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
     }
     .nav.nav-pills {
         min-width: 376px;
@@ -166,7 +168,7 @@ export default {
         display: block;
         right: -20px;
         top: 0;
-        transition: .45s;
+        transition: .525s ease-in-out;
 
         &.tab-0 {top: 0%;}
         &.tab-1 {top: 10.5%;}
@@ -188,13 +190,14 @@ export default {
         &::after {
             content: '';
             background: #0D8CE9;
+            opacity: .85;
             border-radius: 100%;
             max-width: 100%;
             width: 214px;
             height: 214px;
             position: absolute;
-            top: 0px;
-            right: 25px;
+            top: 5px;
+            right: -15px;
             z-index: -1;
         }
         h3.title {
@@ -208,6 +211,11 @@ export default {
             color: #000000;
             font-size: 21px;
             line-height: 1.3em;
+
+            >a {
+                color: #0D8CE9;
+                text-shadow: 0px 0px 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 19px #ffffff;
+            }
 
             &.after {
                 padding-right: 0;

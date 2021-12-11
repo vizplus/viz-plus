@@ -1,5 +1,5 @@
 <template>
-    <section class="slider">
+    <section class="slider" id="about">
         <b-container>
             <b-row>
                 <b-col>
@@ -43,10 +43,9 @@ export default {
       return {
         sliderSettings: {
             infiniteScroll: false,
-            autoPlay: true,
+            autoPlay: false,
             wheelControl: false,
             mouseDrag: false,
-            playSpeed: 12000,
             transition: 0,
             itemsToShow: 1,
             centerMode: true
@@ -58,25 +57,25 @@ export default {
 
 <style lang="scss">
 .slider {
-    background: url(~~/assets/images/slider-bg-01.svg) no-repeat top center, url(~~/assets/images/slider-bg-02.svg) no-repeat top right;
-    background-size: cover, 10%;
-    min-height: 845px;
+    background: url(~~/assets/images/slider-bg-01.svg) no-repeat top left, url(~~/assets/images/slider-bg-02.svg) no-repeat top right;
+    background-size: auto 100%, 10%;
+    min-height: 825px;
     overflow: hidden;
 
     .after {
-        font-size: 18px;
+        text-align: center;
+        font-size: 19px;
         line-height: 1.2em;
         color: #fff;
         position: absolute;
-        bottom: -110px;
-        right: 45px;
+        bottom: -55px;
+        right: 5vw;
+        @media all and (min-width: 2275px) {right: unset; left: 25px;}
     }
-    @media all and (max-width: 1550px) {
-        .after {
-            font-size: 20px;
-            bottom: -80px;
-        }
-    }
+
+    @media all and (max-width: 1500px) {min-height: 875px;background-position: bottom left, top right; background-size: 100% 100%, 10%; .after {bottom: -25px;} }
+    @media all and (min-width: 1325px) and (max-width: 1440px) {min-height: 895px; .after {bottom: -30px;} }
+
     .main-title {
         font-size: 46px;
         line-height: 1.3em;
@@ -86,7 +85,6 @@ export default {
 
         .colored {
             color: #0D8CE9;
-            border-bottom: 2px solid #0D8CE9;
         }
     }
 
@@ -106,14 +104,16 @@ export default {
             bottom: 0;
             right: 0;
             left: -10%;
+            
+            .hooper-prev {left: 45px;}
 
             button {
                 padding: 0;
                 opacity: 1;
                     
                 svg {
-                    width: 49px;
-                    height: 49px;
+                    width: 64px;
+                    height: 64px;
                     fill: #0D8CE9;
                     transition: .3s;
                 }

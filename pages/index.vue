@@ -127,6 +127,7 @@ export default {
 $primary-color: #000000;
 $main-color: #0D8CE9;
 
+html {scroll-behavior: smooth;}
 body {
   font-family: 'Montserrat';
 }
@@ -187,6 +188,11 @@ body {
       border: 1px solid $primary-color;
       border-radius: 5px;
       padding: 5px 15px 10px;
+      transition: .3s;
+
+      &:hover {
+        color: $main-color;
+      }
 
       &.arrow img {max-height: 10px; margin-top: 12px;}
       &.arrows img {max-height: 16px}
@@ -195,6 +201,7 @@ body {
         position: relative;
         width: 57px;
         margin: 8px auto 0;
+        transition: .3s;
       }
     }
 
