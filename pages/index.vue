@@ -62,11 +62,11 @@
             <span class="logo">VIZ+</span>
           </b-col>
           <b-col class="text-right">
-            <a class="link" target="_blank" :href="link.link" v-for="(link, i) in $t('footer_links')" v-bind:key="i">
+            <a class="tg-link link" target="_blank" :href="link.link" v-for="(link, i) in $t('footer_links')" v-bind:key="i">
               {{link.name}}
             </a>
             <div class="email">
-              <a class="link" :href="'mailto:'+$t('home.email')" v-html="$t('home.email')"></a>
+              <a class="mail-link link" :href="'mailto:'+$t('home.email')" v-html="$t('home.email')"></a>
             </div>
           </b-col>
         </b-row>
@@ -117,6 +117,23 @@ export default {
         duration: 0,
         easing: 'easeInOutSine',
         complete: done
+      })
+    }
+  },
+
+  mounted() {
+    this.entry()
+  },
+
+  methods: {
+    entry() {
+      const anime = this.$anime
+      anime({
+        targets: 'main',
+        opacity: [0, 1],
+        top: ['100%', 0],
+        duration: 1200,
+        easing: 'easeInOutSine',
       })
     }
   }
@@ -243,12 +260,16 @@ body {
   }
 
   .link {
+    position: relative;
     color: #fff;
     font-weight: 500;
     font-size: 21px;
     line-height: 1.3em;
     border-bottom: 1px solid #fff;
     transition: .2s;
+    
+    &.tg-link::after {content: '';position: absolute;top: -5px;left: -40px;width: 38px;height: 38px;background: url(~~/assets/images/tg-planer.svg) no-repeat center center;}
+    &.mail-link::after {content: '';position: absolute;top: 0;left: -37.5px;width: 34px;height: 34px;background: url(~~/assets/images/i-mail.svg) no-repeat center center;}
 
     &:hover {
       border-bottom: 1px solid transparent;
@@ -382,6 +403,8 @@ body {
     }
     .link {
       font-size: 16px;
+
+       &.tg-link::after, &.mail-link::after {left: unset; top: -7.5px; right: -40px;}
     }
     .link + .link {
       margin-left: 0;
@@ -412,6 +435,16 @@ body {
     .button-group .btn {
       font-size: 16px;
       padding: 5px 7.5px;
+    }
+  }
+}
+
+@media all and (max-width: 340px) {
+  .entry-slide {
+
+    .button-group .btn {
+      font-size: 14px;
+      padding: 5px;
     }
   }
 }

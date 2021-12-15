@@ -36,7 +36,7 @@
                                 </template>
 
                                 <template v-if="tab.notifications">
-                                    <div class="notification" v-for="notification in tab.notifications" v-bind:key="notification.title">
+                                    <div @click="notificationLink(notification.link)" class="notification" v-for="notification in tab.notifications" v-bind:key="notification.title">
                                         <div class="title-group">
                                             <template v-if="notification.icon">
                                                 <img class="icon" src="~~/assets/images/tg.svg" alt="" v-if="notification.icon == 'telegram'">
@@ -82,6 +82,9 @@ export default {
       },
       onSlideEnd(slide) {
         this.sliding = false
+      },
+      notificationLink(link) {
+          window.open(link);
       }
     }
 }
@@ -275,8 +278,13 @@ export default {
                     .link {
                         color: #3F3F3F;
                         font-weight: 600;
-                        font-size: 21px;
-                        line-height: 1.3em;
+                        font-size: 18px;
+                        line-height: 1.4em;
+                        text-decoration: underline;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
                     }
                 }
                 .content {
@@ -350,6 +358,9 @@ export default {
             padding: 20px 48px 15px 24px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 15px;
+            transition: .3s;
+
+            &:hover {cursor: pointer;background: #eeeeee;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);}
 
             .message {
                 font-size: 18px;

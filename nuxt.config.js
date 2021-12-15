@@ -48,6 +48,7 @@ export default {
   ],
 
   i18n: {
+    strategy: 'prefix_except_default',
     locales: [
       {
         code: 'en',
@@ -66,6 +67,7 @@ export default {
     langDir: 'lang/',
     defaultLocale: 'ru',
     fallbackLocale: 'ru',
+    vueI18nLoader: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

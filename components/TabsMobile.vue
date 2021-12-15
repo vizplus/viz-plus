@@ -56,7 +56,7 @@
                 </template>
 
                 <template v-if="tab.notifications">
-                    <div class="notification" v-for="notification of tab.notifications" v-bind:key="notification.title">
+                    <div @click="notificationLink(notification.link)" class="notification" v-for="notification of tab.notifications" v-bind:key="notification.title">
                         <template v-if="notification.icon">
                             <div class="title-group">
                                 <div class="w-100 d-flex align-items-center">
@@ -133,6 +133,9 @@ export default {
       },
       onSlideEnd(slide) {
         this.sliding = false
+      },
+      notificationLink(link) {
+          window.open(link);
       }
     }
 }
@@ -434,6 +437,8 @@ export default {
             border-radius: 15px;
             position: relative;
             z-index: 2;
+
+            &:hover {cursor: pointer;background: #eeeeee;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);}
 
             .message {
                 font-size: 18px;

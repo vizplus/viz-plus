@@ -29,7 +29,7 @@ export default async (context, locale) => {
         },
         {
             'title': 'VIZ converts social capital <span class = "colored"> into numbers </span>',
-            'subtitle': 'Every like and every thanks increases your digital social capital in VISA',
+            'subtitle': 'Every like and every thanks increases your digital social capital in VIZ',
             'image': 'slide-4.png',
         },
         {
@@ -78,17 +78,17 @@ export default async (context, locale) => {
             'image': 'slide-13.svg',
         },
         {
-            'title': 'The accumulated social capital in VISA can be turned into money <span class = "colored"> </span>',
+            'title': 'The accumulated social capital in VIZ can be turned into money <span class = "colored"> </span>',
             'subtitle': 'If you are very popular, sell free capital, monetize your success',
             'image': 'slide-14.svg',
         },
         {
-            'title': 'In VISA you can build your own business <span class = "colored"> without permissions and restrictions </span>',
+            'title': 'In VIZ you can build your own business <span class = "colored"> without permissions and restrictions </span>',
             'subtitle': 'Program, advertise, help others use their social capital',
             'image': 'slide-15.svg',
         },
         {
-            'title': 'Visa has many other features that you will learn about when you start using it.',
+            'title': 'VIZ has many other features that you will learn about when you start using it.',
             'subtitle': '<span class = "colored big"> For example, right now! </span>',
             'image': 'slide-16.png',
         },
@@ -109,147 +109,156 @@ export default async (context, locale) => {
         },
         {
             'title': '$10mln',
-            'subtitle': 'Visa turnover between users'
+            'subtitle': 'VIZs turnover between users'
         }
     ];
 
     let tabs = [
         {
-            'name': 'Создайте ВИЗ',
-            'title': 'Создайте свой первый <br>ВИЗ-аккаунт',
-            'content': 'На <a href="https://start.viz.plus/" target="_blank">start.viz.plus</a> пройдите базовый микрокурс по основам ВИЗа и создайте аккаунт. Это займёт несколько минут и не потребует передачи ваших личных данных.',
+            'name': 'Create VIZ',
+            'title': 'Create your first <br> VIZ account',
+            'content': 'At <a href="https://start.viz.plus/" target="_blank"> start.viz.plus </a> take a basic micro-course on VIZ basics and create an account. This will take a few minutes and does not require the transfer of your personal data. ',
         },
         {
-            'name': 'Ответ-вопрос',
-            'title': 'Получайте ответы на возникающие вопросы',
-            'content': 'Откройте <a href="https://about.viz.plus/" target="_blank">about.viz.plus</a> — подборку вопросов и ответов для начинающих участников ВИЗа и заглядывайте в неё, если на следующих шагах что-то окажется непонятным. На этом же подсайте вы найдёте подробную информацию о ВИЗе для разработчиков, предпринимателей и инвесторов.',
+            'name': 'Question-answer',
+            'title': 'Get answers to your questions',
+            'content': 'Open <a href="https://about.viz.plus/" target="_blank"> about.viz.plus </a> - a compilation of questions and answers for new VIZ members and check it out if something turns out to be incomprehensible in the next steps. On the same sub-site you will find detailed information about VIZ for developers, entrepreneurs and investors. ',
         },
         {
-            'name': 'Личный кабинет',
-            'title': 'Подключите ваш аккаунт к Личному кабинету',
-            'content': 'Зайдите на <a href="https://my.viz.plus" target="_blank">my.viz.plus</a>, введите имя аккаунта и активный приватный ключ, чтобы получить доступ к операциям. Осмотритесь, походите по страницам, ознакомьтесь с функциями приложения, заполните профиль аккаунта, если хотите.',
+            'name': 'Personal account',
+            'title': 'Connect your account to the Personal Account',
+            'content': 'Go to <a href="https://my.viz.plus" target="_blank"> my.viz.plus </a>, enter your account name and active private key to access operations. Take a look around, navigate through the pages, check out the app`s features, complete your account profile if you like. ',
         },
         {
-            'name': 'Расширение Vizonator',
-            'title': 'Установите браузерное расширение Vizonator',
-            'content': 'Расширение для браузеров Chrome <a href="https://chrome.google.com/webstore/detail/vizonator/iehoehfkanaobnbldjfjfabbpaiiojnp" target="_blank">(установка)</a> и Firefox <a href="https://addons.mozilla.org/ru/firefox/addon/vizonator/" target="_blank">(установка)</a> позволяет награждать и получать награды непосредственно в Twitter’е, Youtube’е, SoundCloud и на других сайтах (список будет расширяться). Установите расширение и добавьте в него ваш аккаунт и обычный приватный ключ.',
+            'name': 'Vizonator Extension',
+            'title': 'Install the Vizonator browser extension',
+            'content': 'Chrome browser extension <a href="https://chrome.google.com/webstore/detail/vizonator/iehoehfkanaobnbldjfjfabbpaiiojnp" target="_blank"> (install) </a> and Firefox <a href = "https://addons.mozilla.org/ru/firefox/addon/vizonator/" target = "_blank"> (install) </a> allows you to reward and receive awards directly on Twitter, Youtube, SoundCloud and on other sites (the list will expand). Install the extension and add your account and regular private key to it. ',
         },
         {
-            'name': 'Телеграм-бот VIZ Social bot',
-            'title': 'Подключите ваш аккаунт к Телеграм-боту VIZ Social bot',
-            'content': '<p>Запустите VIZ Social bot и добавьте в него ваш виз-аккаунт, введя обычный приватный ключ. Следуйте инструкциям в боте.</p><p>Принимайте участие в обсуждениях в группах, будьте полезными и интересными другим участникам. Получайте награды и увеличивайте свой цифровой социальный капитал.</p><p>Предложите админам чатов и каналов, в которых вы состоите, добавить VIZ Social bot, чтобы получать и раздавать награды.</p>',
-            'notification_message': 'Проверьте список каналов и групп в Телеграме с виз-ботом и подпишитесь на те, что вам интересны',
+            'name': 'Telegram bot VIZ Social bot',
+            'title': 'Connect your account to the Telegram bot VIZ Social bot',
+            'content': '<p> Run VIZ Social bot and add your VIZ account to it by entering your usual private key. Follow the instructions in the bot. </p> <p> Take part in group discussions, be useful and interesting to other members. Get rewards and grow your digital social capital. </p> <p> Invite the chat and channel admins you are a member to add the VIZ Social bot to receive and give out rewards. </p> ',
+            'notification_message': 'Check the list of channels and groups in Telegram with a VIZ bot and subscribe to those that interest you:',
             'notifications': [
                 {
                     'icon': 'telegram',
                     'title': 'Оттиск на тисе',
-                    'message': 'Небольшой авторский канал. Заметки о науке, кульуре, цитаты из книг, интересные картинки из интернета и офлайна, другие мелочи жизни',
+                    'message': 'Small author channel. Notes about science, culture, quotes from books, interesting pictures from the Internet and offline, other little things in life ',
+                    'link': 'https://t.me/tisnu_channel',
                 },
                 {
                     'icon': 'telegram',
                     'title': 'Web 3.0',
-                    'message': 'Новости, аналитика, ссылки, видео о развитии нового Интернета. Автор - один из самых известных российских аналитиков в сфере блокчейн-технологий (Menaskop).',
+                    'message': 'News, analytics, links, videos about the development of the new Internet. The author is one of the most famous Russian analysts in the field of blockchain technologies (Menaskop). ',
+                    'link': 'https://t.me/web3news',
                 }
             ]
-        },
+        }, 
         {
-            'name': 'Соц. сеть Readdle.Me',
-            'title': 'Подключите ваш аккаунт к социальной сети без цензуры Readdle.Me',
-            'content': '<p>Перейдите на <a href="https://readdle.me/" target="_blank">Readdle.Me</a>, введите имя своего аккаунта и приватный обычный ключ.</p> <p>Напишите первый пост, а потом расскажите своим друзьям в других социальных сетях и мессенджерах, что теперь у вас есть площадка для общения, которую невозможно заблокировать и цензурировать.</p>',
-        },
+            'name': 'Soc. network Readdle.Me ',
+            'title': 'Connect your account to the uncensored social network Readdle.Me',
+            'content': '<p> Go to <a href="https://readdle.me/" target="_blank"> Readdle.Me </a>, enter your account name and private regular key. </ p > <p> Write the first post, and then tell your friends on other social networks and instant messengers that you now have a communication platform that cannot be blocked and censored. </p> ',
+        }, 
         {
-            'name': 'Информирование о ВИЗе',
-            'title': 'Получайте информацию о ВИЗе',
-            'content': '<p>Экосистема ВИЗа развивается, и активному участнику сообщества стоит следить за новостями, анонсами и обсуждениями.</p><p>Выберите, какой способ доступа к новостям о ВИЗе вам удобнее, и будьте в курсе всего, что происходит в экосистеме.</p>',
+            'name': 'Informing about VIZ',
+            'title': 'Get information about VIZ',
+            'content': '<p> The VIZ ecosystem is evolving, and an active community member should follow the news, announcements and discussions. </p> <p> Choose which way of accessing VIZ news is the most convenient for you and stay on top of everything. what is happening in the ecosystem. </p> ',
             'notifications': [
                 {
                     'icon': 'telegram',
                     'source': 'viz.media',
-                    'title': 'Медиаплатформа ВИЗ',
-                    'message': 'Информационный портал о ВИЗе: статьи, новости, ссылки. Собирает информацию из всех доступных источников, систематизирует, публикует, позволяет комментировать и награждать авторов.',
+                    'title': 'VIZ Media Platform',
+                    'message': 'Information portal about VIZ: articles, news, links. Gathers information from all available sources, organizes, publishes, allows commenting and rewarding authors. ',
+                    'link': 'https://viz.media/',
                 },
                 {
                     'icon': 'viz_plus',
                     'source': 'telegram',
-                    'title': 'viz+',
-                    'message': 'Основная телеграм-группа Инициативы VIZPLUS. Информация о релизах, ответы на вопросы, новости, предложения.',
+                    'title': 'viz +',
+                    'message': 'Basic telegram group of the VIZPLUS Initiative. Information about releases, answers to questions, news, offers. ',
+                    'link': 'https://t.me/vizplus',
                 },
                 {
                     'icon': 'viz_world',
                     'source': 'telegram',
                     'title': 'VIZ.World',
-                    'message': 'Популярная телеграм-группа о ВИЗе. Общение пользователей, информация о новых разработках, обсуждение как концепции ВИЗа, так и конкретных вопросов.',
+                    'message': 'Popular telegram group about VIZ. Communication of users, information about new developments, discussion of both the VIZ concept and specific issues. ',
+                    'link': 'https://t.me/viz_world',
                 },
             ]
-        },
+        }, 
         {
-            'name': 'Покупка и продажа ВИЗов',
-            'title': 'Изучите возможности покупки и продажи визов',
-            'content': '<p>Увеличить свой цифровой социальный капитал можно быстро и просто - купив необходимое количество визов на свободном рынке. Большой капитал увеличит ваше влияние в экосистеме, пользуйтесь этим, пока токены не подорожали.</p><p>В экосистеме ВИЗа стихийно развиваются площадки, на которых покупатели и продавцы визов находят друг друга. Напомним, в ВИЗе нет администрации или главной компании, все отношения между участниками экосистемы - их личное дело, они никем не контролируются, а все сделки необратимы. Выбирайте партнёров осмотрительно и старайтесь контролировать риски.</p>',
+            'name': 'Buying and selling VIZs',
+            'title': 'Explore the possibilities of buying and selling VIZs',
+            'content': '<p> You can quickly and easily increase your digital social capital by purchasing the required number of VIZs in the free market. Large capital will increase your influence in the ecosystem, use this before the tokens rise in price. </p> <p> In the VIZ ecosystem, platforms are spontaneously developing where buyers and sellers of VIZs find each other. Recall that there is no administration or main company in VIZ, all relations between ecosystem participants are their own business, they are not controlled by anyone, and all transactions are irreversible. Choose partners carefully and try to control risks. </p> ',
             'notifications': [
                 {
                     'source': 'menaskop.xyz',
-                    'title': 'Обменник Menaskop',
-                    'message': 'Прямая продажа токенов viz за несколько видов криптовалют. Возможны крупные сделки. Цена viz указана в долларах, цена в криптовалюте рассчитывается в долларах автоматически на основе объёма заказа и курса соответствующей валюты к доллару. Самый удобный вариант для покупателей, имеющих криптовалюту.',
+                    'title': 'Menaskop exchanger',
+                    'message': 'Direct sale of viz tokens for several types of cryptocurrencies. Big deals are possible. The viz price is indicated in dollars, the price in cryptocurrency is calculated in dollars automatically based on the order volume and the exchange rate of the corresponding currency against the dollar. The most convenient option for buyers with cryptocurrency. ',
+                    'link': 'https://menaskop.xyz/',
                 },
                 {
                     'source': 'telegram',
-                    'title': 'viz+trade',
-                    'message': 'Телеграм-группа для торговли визами, курируемая Инициативой VIZPLUS. Доска объявлений о покупке и продаже визов участниками. Предлагайте, договаривайтесь, проводите сделки под свою ответственность.',
+                    'title': 'viz + trade',
+                    'message': 'Telegram group for the VIZ trade, curated by the VIZPLUS Initiative. Notice board for the purchase and sale of VIZs by participants. Offer, negotiate, conduct transactions at your own risk. ',
+                    'link': 'https://t.me/vizplus_trade',
                 },
                 {
                     'source': 'viz.media',
-                    'title': 'Магазин чеков ВИЗа',
-                    'message': 'Продажа визов в виде чеков за рубли, доллары, евро с использованием банковских карт, Webmoney, QIWI, счетов мобильных операторов и пр. Купленные чеки можно погасить на свой аккаунт в Личном кабинете my.viz.plus. Магазин предлагает чеки на разные суммы. Работает автоматически.',
+                    'title': 'VIZ check shop',
+                    'message': 'Sale of VIZs in the form of checks for rubles, dollars, euros using bank cards, Webmoney, QIWI, mobile operator accounts, etc. Purchased checks can be redeemed to your account in your personal account my.viz.plus. The store offers checks for different amounts. Works automatically. ',
+                    'link': 'https://viz.media/',
                 },
                 {
                     'source': 'wallet.bitshares.org',
-                    'title': 'Децентрализованная криптобиржа Bitshares',
-                    'message': 'Автоматическая покупка и продажа визов в парах с USDT, BTS, BTC. Требует понимания биржевой торговли и знакомства с не самым простым интерфейсом биржи. Не рекомендуется для новичков и проведения разовых сделок.',
+                    'title': 'Bitshares Decentralized Crypto Exchange',
+                    'message': 'Automatic purchase and sale of VIZs in pairs with USDT, BTS, BTC. Requires an understanding of exchange trading and familiarity with the not the simplest interface of the exchange. Not recommended for newbies and one-time deals. ',
+                    'link': 'https://wallet.bitshares.org/',
                 }
             ]
-        },
+        }, 
         {
-            'name': 'Идея и философис ВИЗа',
-            'title': 'Погрузитесь в идеи ВИЗа и измените свою жизнь к лучшему',
-            'content': 'ВИЗ - это новый слой Интернета и новая экономика для важной части вашей жизни. Чем раньше и глубже вы проникнете в идеи и философию ВИЗа, тем полезнее и выгоднее для вас будет участие в его росте.',
-        },
+            'name': 'The idea and philosophy of VIZ',
+            'title': 'Immerse yourself in VIZ ideas and change your life for the better',
+            'content': 'VIZ is a new layer of the Internet and a new economy for an important part of your life. The sooner and deeper you penetrate into the ideas and philosophy of VIZ, the more useful and beneficial it will be for you to participate in its growth. ',
+        }, 
         {
-            'name': 'Инициатива VIZPLUS',
-            'title': 'Примите участие в работе Инициативы VIZPLUS',
-            'content': 'Инициатива VIZPLUS - частный некоммерческий проект. Мы проектируем, заказываем, финансируем разработку и поддерживаем работу ключевых сервисов для участников ВИЗа. Мы содержим ноды блокчейна VIZ - как полную публичную, так и несколько делегатских. Также мы помогаем распространять информацию о ВИЗе, привлекаем в ВИЗ разработчиков и инвесторов.',
-            'after_content': '<p>Если вы занимаетесь разработкой программного обеспечения, веб-дизайном, переводами, ботами для соцсетей и мессенджеров, интерфейсами и т.п. и заинтересованы в развитии экосистемы ВИЗ, мы готовы обсудить с вами варианты сотрудничества.</p><p>Если вы представляете крупные сообщества и хотите подключиться к экосистеме социального капитала раньше конкурентов, обратитесь к нам за консультациями и технической поддержкой. Мы предоставим готовые решения или разработаем их специально для вас, а также делегируем большой объём социального капитала для развития вашего сообщества.</p>',
+            'name': 'VIZPLUS Initiative',
+            'title': 'Get involved in the VIZPLUS Initiative',
+            'content': 'The VIZPLUS initiative is a private non-profit project. We design, order, finance the development and support the operation of key services for VIZ members. We maintain the nodes of the VIZ blockchain - both a full public one and several delegate ones. We also help to spread information about VIZ, attract developers and investors to VIZ. ',
+            'after_content': '<p> If you are involved in software development, web design, translation, bots for social networks and messengers, interfaces, etc. and are interested in the development of the VIZ ecosystem, we are ready to discuss options for cooperation with you. </p> <p> If you represent large communities and want to connect to the social capital ecosystem before competitors, contact us for advice and technical support. We will provide ready-made solutions or develop them especially for you, as well as delegate a large amount of social capital for the development of your community. </p> ',
             'slider': [
                 {
-                    'title': 'Первый аккаунт',
-                    'subtitle': 'Быстрое и анонимное создание аккаунта',
-                    'name': 'start.VIZ+',
+                    'title': 'First account',
+                    'subtitle': 'Quick and anonymous account creation',
+                    'name': 'start.VIZ +',
                     'link': 'start.viz.plus',
-                    'content': 'Простой и безопасный способ создания вашего первого аккаунта в ВИЗе. Вам не придётся сообщать сервису какую-либо личную информацию, а ваши ключи не передаются на сервер.',
+                    'content': 'An easy and secure way to create your first VIZ account. You do not have to provide the service with any personal information, and your keys are not transferred to the server. ',
                     'bg': '#FF8B71'
                 },
                 {
-                    'title': 'База знаний',
-                    'subtitle': 'Инструкции, советы, рекомендации, примеры',
-                    'name': 'about.VIZ+',
+                    'title': 'Knowledge Base',
+                    'subtitle': 'Instructions, tips, tricks, examples',
+                    'name': 'about.VIZ +',
                     'link': 'about.viz.plus',
-                    'content': 'Необходимая информация для владельцев социального капитала, разработчиков, предпринимателей и инвесторов. Теория и практика ВИЗа для тех, кто хочет знать больше.',
+                    'content': 'Essential information for social capital owners, developers, entrepreneurs and investors. VIZ theory and practice for those who want to know more. ',
                     'bg': '#83A5EC'
                 },
                 {
-                    'title': 'Личный кабинет',
-                    'subtitle': 'Приложения для управления аккаунтом',
-                    'name': 'my.VIZ+',
+                    'title': 'Personal account',
+                    'subtitle': 'Account Management Apps',
+                    'name': 'my.VIZ +',
                     'link': 'my.viz.plus',
-                    'content': 'Ваш личный кабинет в ВИЗе. Практически все функции блокчейна в простом и понятном интерфейсе. Работает и как сайт, и как автономное веб-приложение с прямым доступом в блокчейн.',
+                    'content': 'Your personal account in VIZ. Almost all blockchain functions in a simple and intuitive interface. Works both as a website and as a standalone web application with direct access to the blockchain. ',
                     'bg': '#62D0A1'
                 },
                 {
-                    'title': 'Обозреватель',
-                    'subtitle': 'Параметры и состояние блокчейна и аккаунтов',
-                    'name': 'info.VIZ+',
+                    'title': 'Browser',
+                    'subtitle': 'Parameters and state of blockchain and accounts',
+                    'name': 'info.VIZ +',
                     'link': 'info.viz.plus',
-                    'content': 'Актуальные данные о состоянии блокчейна VIZ, параметры экономики, графики активности. История операций аккаунтов. Сведения о делегатах ВИЗа. Блок-эксплорер.',
+                    'content': 'Up-to-date data on the state of the VIZ blockchain, economy parameters, activity graphs. Account operations history. Information about VIZ delegates. Block explorer. ',
                     'bg': '#EFB98C'
                 }
             ]
@@ -260,11 +269,7 @@ export default async (context, locale) => {
     let footer_links = [
         {
             'name': 'Telegram for questions',
-            'link': 'https://t.me/ae_viz_plus',
-        },
-        {
-            'name': 'Telegram Conversation',
-            'link': 'https://t.me/vizplus',
+            'link': 'https://t.me/adm_viz_plus',
         },
     ];
 

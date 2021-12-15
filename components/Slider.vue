@@ -1,5 +1,5 @@
 <template>
-    <section class="slider" id="about">
+    <section class="slider" id="about" v-anime="{ opacity: [0, 1], duration: 1200, delay: 400, easing: 'easeInOutSine', loop: false, }">
         <b-container>
             <b-row>
                 <b-col>
@@ -13,7 +13,8 @@
                                 <div class="subtitle" v-html="slide.subtitle"></div>
                             </div>
                             <template v-if="slide.image !== ''">
-                                <img class="img-fluid slide-image" :src="require(`~/assets/images/${slide.image}`)" :alt="slide.title">
+                                <SliderImages :name="slide.image"/>
+                                <!-- <img class="img-fluid slide-image" :src="require(`~/assets/images/${slide.image}`)" :alt="slide.title"> -->
                             </template>
                             <div class="slider-info mobile">
                                 <div class="subtitle" v-html="slide.subtitle"></div>
@@ -21,7 +22,15 @@
                         </slide>
                         <hooper-navigation slot="hooper-addons"></hooper-navigation>
                     </hooper>
-                    <span class="after" v-html="$t('home.slider_after')"></span>
+                </b-col>
+            </b-row>
+        </b-container>
+        <b-container>
+            <b-row>
+                <b-col>
+                    <div class="after-body">
+                        <span class="after" v-html="$t('home.slider_after')"></span>
+                    </div>
                 </b-col>
             </b-row>
         </b-container>
@@ -29,15 +38,17 @@
 </template>
 
 <script>
-import { Hooper, Slide, Pagination as HooperPagination, Navigation as HooperNavigation } from 'hooper';
-import 'hooper/dist/hooper.css';
+import SliderImages from "@/components/SliderImages.vue"
+import { Hooper, Slide, Pagination as HooperPagination, Navigation as HooperNavigation } from 'hooper'
+import 'hooper/dist/hooper.css'
 
 export default {
     components: {
         Hooper,
         Slide,
         HooperPagination,
-        HooperNavigation
+        HooperNavigation,
+        SliderImages
     },
     data() {
       return {
@@ -59,22 +70,33 @@ export default {
 .slider {
     background: url(~~/assets/images/slider-bg-01.svg) no-repeat top left, url(~~/assets/images/slider-bg-02.svg) no-repeat top right;
     background-size: auto 100%, 10%;
-    min-height: 825px;
+    min-height: 895px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    .after-body {
+        margin-bottom: 60px;
+        text-align: right;
+
+        @media all and (min-width: 2250px){margin-bottom: 80px;text-align: left;}
+        @media all and (max-width: 990px){margin-top: 120px; margin-bottom: 40px}
+        @media all and (max-width: 560px){margin-top: 70px; margin-bottom: 30px}
+        @media all and (max-width: 470px){text-align: left;}
+        @media all and (max-width: 400px){margin-top: 40px; margin-bottom: 10px}
+    }
     .after {
+        margin-left: auto;
+        margin-right: 0;
+        display: inline-block;
         text-align: center;
         font-size: 19px;
         line-height: 1.2em;
         color: #fff;
-        position: absolute;
-        bottom: -55px;
-        right: 5vw;
-        @media all and (min-width: 2275px) {right: unset; left: 25px;}
     }
 
-    @media all and (max-width: 1500px) {min-height: 875px;background-position: bottom left, top right; background-size: 100% 100%, 10%; .after {bottom: -25px;} }
-    @media all and (min-width: 1325px) and (max-width: 1440px) {min-height: 895px; .after {bottom: -30px;} }
+    /* @media all and (max-width: 1500px) {min-height: 875px;background-position: bottom left, top right; background-size: 100% 100%, 10%;} */
 
     .main-title {
         font-size: 46px;
@@ -90,7 +112,7 @@ export default {
 
     .hooper {
         height: auto;
-        min-height: 600px;
+        min-height: 475px;
 
         .hooper-track {
             align-items: center;
@@ -105,7 +127,7 @@ export default {
             right: 0;
             left: -10%;
             
-            .hooper-prev {left: 45px;}
+            @media all and (max-width: 1540px) and (min-width: 768px){.hooper-prev {left: 45px;}}
 
             button {
                 padding: 0;
@@ -132,20 +154,49 @@ export default {
             align-items: center;
             position: relative;
 
+            .svg-image {
+                margin-left: auto; margin-right: 0;
+                max-width: 40%;
+                width: 100%;
+
+                svg {max-width: 100%; width: 100%; max-height: 30vw;height: 100%; margin-left: auto; margin-right: 0; display: block;}
+                svg .lay-01 {opacity: 0; transform: scale(0.45);transition: 0.75s}
+                svg .lay-02, svg .lay-03, svg .lay-04 {opacity: 0;transition: 1.5s;}
+            }
+            @media all and (max-width: 990px) {
+                .svg-image {
+                    margin: 30px auto 15px;
+                    max-width: 100%;
+                    svg {max-height: 60vw;}
+                }
+            }
+
             .slide-image {
                 transition: .9s ease-in-out;
                 transform: scale(0.65) rotate(0.225turn);
                 opacity: 0;
             }
-
             .title, .subtitle {
-                transition: .45s ease-in-out;
+                transition: .7s ease-in-out;
                 opacity: 0;
             }
 
             &.is-current {
+                .title {transition-delay: 0.35s}
+                .subtitle {transition-delay: 0.7s}
+                .title, .subtitle {opacity: 1}
 
-                .title, .subtitle, .slide-image {
+                .svg-image {
+                    svg .lay-01 {transition-delay: 0.4s}
+                    svg .lay-02 {transition-delay: 0.85s}
+                    svg .lay-03 {transition-delay: 1s}
+                    svg .lay-04 {transition-delay: 1.25s}
+
+                    svg .lay-01 {opacity: 1;transform: scale(1); }
+                    svg .lay-02, svg .lay-03, svg .lay-04 {opacity: 1;}
+                }
+
+                .slide-image {
                     transform: scale(1) rotate(0turn);
                     opacity: 1;
                 }
@@ -324,8 +375,7 @@ export default {
     section.slider {
 
         .after {
-            font-size: 16px;
-            bottom: -60px;
+            font-size: 14px;
         }
     }
 }
