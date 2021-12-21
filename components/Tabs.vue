@@ -215,6 +215,8 @@ export default {
             font-size: 21px;
             line-height: 1.3em;
 
+            ul {padding: 0 0 0 10px; margin-top: 10px; li {font-size: 18px; display: flex; align-items: center; list-style: none; &:before {content: ''; border-radius: 100%; background: #0D8CE9; width: 4px; height: 4px;margin-right: 5px;}}}
+
             >a {
                 color: #0D8CE9;
                 text-shadow: 0px 0px 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 19px #ffffff;
