@@ -19,28 +19,54 @@
                                         <div class="subtitle" v-html="slide.subtitle"></div>
                                         <div class="name-group">
                                             <div class="name" v-html="slide.name"></div>
-                                            <a class="link" :href="'https://'+slide.link" target="_blank" v-html="slide.link"></a>
                                         </div>
                                         <p class="content" v-html="slide.content"></p>
+                                        <div class="name-group">
+                                            <a class="link" :href="'https://'+slide.link" target="_blank" v-html="slide.link"></a>
+                                        </div>
                                     </b-carousel-slide>
                                 </b-carousel>
+
+                                <template v-if="tab.custom_links">
+                                    <div class="custom-link" v-for="link in tab.custom_links" v-bind:key="link.title">
+                                        <img :src="'/images/icons/'+link.image" :alt="link.title" v-if="link.image">
+                                        <a :href="link.url" class="link" target="_blank" v-html="link.title"></a>
+                                    </div>
+                                </template>
 
                                 <template v-if="tab.after_content">
                                     <div class="content after" v-html="tab.after_content"></div>
                                 </template>
 
-                                <ul class="menu" v-if="tab.social_links">
-                                    <li v-for="slink in tab.social_links" v-bind:key="slink.title">
-                                        <img :src="'/images/icons/'+slink.image+'.png'" :alt="slink.title" v-if="slink.image" />
-                                        <span v-html="slink.title"></span>
-                                    </li>
-                                </ul>
+                                <template v-if="tab.notifications_after_content">
+                                    <div @click="notificationLink(notification.link)" class="notification" v-for="notification in tab.notifications_after_content" v-bind:key="notification.title">
+                                        <div class="title-group">
+                                            <template v-if="notification.icon">
+                                                <img class="icon" src="~~/assets/images/tg.svg" alt="" v-if="notification.icon == 'telegram'">
+                                                <img class="icon" src="~~/assets/images/viz.png" alt="Viz" v-else-if="notification.icon == 'viz'">
+                                                <img class="icon" src="~~/assets/images/viz-media.png" alt="Viz" v-else-if="notification.icon == 'viz_media'">
+                                                <img class="icon" src="~~/assets/images/v-p.png" alt="Viz Plus" v-else-if="notification.icon == 'viz_plus'">
+                                                <img class="icon" src="~~/assets/images/v-w.png" alt="Viz World" v-else-if="notification.icon == 'viz_world'">
+                                            </template>
+                                            <span class="title" v-html="notification.title"></span>
+                                            <span class="source" v-if="notification.source" v-html="notification.source"></span>
+                                        </div>
+                                        <p class="message" v-html="notification.message" v-if="notification.message"></p>
+                                    </div>
+                                </template>
 
                                 <template v-if="tab.notification_message">
                                     <div class="notification-message">
                                         <div class="title" v-html="tab.notification_message"></div>
                                     </div>
                                 </template>
+
+                                <ul class="menu" v-if="tab.social_links">
+                                    <li v-for="link in tab.social_links" v-bind:key="link.title">
+                                        <img :src="'/images/icons/'+link.image+'.png'" :alt="link.title" v-if="link.image" />
+                                        <span v-html="link.title"></span>
+                                    </li>
+                                </ul>
 
                                 <template v-if="tab.notifications">
                                     <div @click="notificationLink(notification.link)" class="notification" v-for="notification in tab.notifications" v-bind:key="notification.title">
@@ -228,16 +254,21 @@ export default {
                 color: #0D8CE9;
                 text-shadow: 0px 0px 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 19px #ffffff;
             }
+        }
 
-            &.after {
-                padding-right: 0;
-                text-align: justify;
-            }
+        .custom-link + .custom-link {margin-top: 15px}
+        .custom-link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img {max-width: 100%; width: 32px; height: 32px; margin-right: 15px;}
+            .link {font-size: 21px; color: #000; border-bottom: 1px solid #0D8CE9; transition: .2s; &:hover {text-decoration: none; border-bottom: 1px solid transparent;}}
         }
 
         ul {
             padding: 0;
-            margin-top: 10px;
+            margin-top: -15px;
             
             li+li {margin-top: 10px}
             li {
@@ -314,14 +345,14 @@ export default {
                     }
                 }
                 .content {
-                    width: 70%;
+                    width: 100%;
                     padding-right: 0;
                     margin-top: 20px;
                     font-size: 21px;
                     line-height: 1.3em;
-                    text-align: justify;
+                    text-align: left;
                     color: #232323;
-                    min-height: 220px;
+                    min-height: 160px;
                 }
             }
             .carousel-control-next {
