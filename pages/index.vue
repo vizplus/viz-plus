@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="main hide">
     <header class="header">
       <b-container>
         <b-row class="align-items-center">
@@ -122,20 +122,12 @@ export default {
   },
 
   mounted() {
-    this.entry()
+    setTimeout(()=>{
+        document.querySelectorAll('body .main').forEach(el=>el.classList.remove('hide'))
+    }, 425)
   },
 
   methods: {
-    entry() {
-      const anime = this.$anime
-      anime({
-        targets: 'main',
-        opacity: [0, 1],
-        top: ['100%', 0],
-        duration: 1200,
-        easing: 'easeInOutSine',
-      })
-    }
   }
 }
 </script>
@@ -147,6 +139,13 @@ $main-color: #0D8CE9;
 html {scroll-behavior: smooth;}
 body {
   font-family: 'Montserrat';
+}
+
+.main {
+  opacity: 1;
+  transition: 1s;
+
+  &.hide {opacity: 0;}
 }
 
 .header {

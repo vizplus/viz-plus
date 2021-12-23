@@ -48,6 +48,13 @@
                     <div class="content" v-html="tab.after_content"></div>
                 </template>
 
+                <ul class="menu" v-if="tab.social_links">
+                    <li v-for="slink in tab.social_links" v-bind:key="slink.title">
+                        <img :src="'/images/icons/'+slink.image+'.png'" :alt="slink.title" v-if="slink.image" />
+                        <span v-html="slink.title"></span>
+                    </li>
+                </ul>
+
                 <template v-if="tab.notification_message">
                     <div class="notification-message">
                         <span class="icon">—</span>
@@ -278,6 +285,21 @@ export default {
                 position: relative;
                 z-index: 2;
                 overflow-y: hidden;
+            }
+            ul {
+                padding: 0;
+                margin-top: 10px;
+                
+                li+li {margin-top: 10px}
+                li {
+                    width: 33%;
+                    font-size: 18px;
+                    display: inline-flex;
+                    align-items: center;
+                    list-style: none;
+
+                    img {width: 26px; height: 26px; object-fit: cover; object-position: center center; margin-right: 10px}
+                }
             }
             .content + .notification {
                 margin-top: 25px;

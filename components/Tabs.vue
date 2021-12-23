@@ -29,6 +29,13 @@
                                     <div class="content after" v-html="tab.after_content"></div>
                                 </template>
 
+                                <ul class="menu" v-if="tab.social_links">
+                                    <li v-for="slink in tab.social_links" v-bind:key="slink.title">
+                                        <img :src="'/images/icons/'+slink.image+'.png'" :alt="slink.title" v-if="slink.image" />
+                                        <span v-html="slink.title"></span>
+                                    </li>
+                                </ul>
+
                                 <template v-if="tab.notification_message">
                                     <div class="notification-message">
                                         <div class="title" v-html="tab.notification_message"></div>
@@ -41,13 +48,14 @@
                                             <template v-if="notification.icon">
                                                 <img class="icon" src="~~/assets/images/tg.svg" alt="" v-if="notification.icon == 'telegram'">
                                                 <img class="icon" src="~~/assets/images/viz.png" alt="Viz" v-else-if="notification.icon == 'viz'">
+                                                <img class="icon" src="~~/assets/images/viz-media.png" alt="Viz" v-else-if="notification.icon == 'viz_media'">
                                                 <img class="icon" src="~~/assets/images/v-p.png" alt="Viz Plus" v-else-if="notification.icon == 'viz_plus'">
                                                 <img class="icon" src="~~/assets/images/v-w.png" alt="Viz World" v-else-if="notification.icon == 'viz_world'">
                                             </template>
                                             <span class="title" v-html="notification.title"></span>
                                             <span class="source" v-if="notification.source" v-html="notification.source"></span>
                                         </div>
-                                        <p class="message" v-html="notification.message"></p>
+                                        <p class="message" v-html="notification.message" v-if="notification.message"></p>
                                     </div>
                                 </template>
                             </div>
@@ -151,7 +159,7 @@ export default {
         line-height: 1;
         font-weight: 400;
     }
-    .nav-item:nth-last-child(1) .nav-link::after {
+    .nav-item:nth-last-child(2) .nav-link::after,.nav-item:nth-last-child(1) .nav-link::after {
         content: attr(aria-posinset);
     }
     .nav-item .nav-link.active {
@@ -174,15 +182,16 @@ export default {
         transition: .525s ease-in-out;
 
         &.tab-0 {top: 0%;}
-        &.tab-1 {top: 10.5%;}
-        &.tab-2 {top: 20.75%;}
-        &.tab-3 {top: 31%;}
-        &.tab-4 {top: 41.25%;}
-        &.tab-5 {top: 51.5%;}
-        &.tab-6 {top: 61.75%;}
-        &.tab-7 {top: 72%;}
-        &.tab-8 {top: 82.25%;}
-        &.tab-9 {top: 97.5%;}
+        &.tab-1 {top: 9.5%;}
+        &.tab-2 {top: 19.25%;}
+        &.tab-3 {top: 28.75%;}
+        &.tab-4 {top: 38%;}
+        &.tab-5 {top: 47%;}
+        &.tab-6 {top: 56.25%;}
+        &.tab-7 {top: 65.5%;}
+        &.tab-8 {top: 74.75%;}
+        &.tab-9 {top: 84%;}
+        &.tab-10 {top: 97.85%;}
 
     }
 
@@ -215,8 +224,6 @@ export default {
             font-size: 21px;
             line-height: 1.3em;
 
-            ul {padding: 0 0 0 10px; margin-top: 10px; li {font-size: 18px; display: flex; align-items: center; list-style: none; &:before {content: ''; border-radius: 100%; background: #0D8CE9; width: 4px; height: 4px;margin-right: 5px;}}}
-
             >a {
                 color: #0D8CE9;
                 text-shadow: 0px 0px 1px #ffffff, 0px 0px 2px #ffffff, 0px 0px 19px #ffffff;
@@ -225,6 +232,23 @@ export default {
             &.after {
                 padding-right: 0;
                 text-align: justify;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin-top: 10px;
+            
+            li+li {margin-top: 10px}
+            li {
+                width: 33%;
+                font-size: 18px;
+                display: inline-flex;
+                align-items: center;
+                list-style: none;
+
+                img {width: 26px; height: 26px; object-fit: cover; object-position: center center; margin-right: 10px}
+                
             }
         }
 

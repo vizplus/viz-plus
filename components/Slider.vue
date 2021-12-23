@@ -25,15 +25,6 @@
                 </b-col>
             </b-row>
         </b-container>
-        <b-container>
-            <b-row>
-                <b-col>
-                    <div class="after-body">
-                        <span class="after" v-html="$t('home.slider_after')"></span>
-                    </div>
-                </b-col>
-            </b-row>
-        </b-container>
     </section>
 </template>
 
