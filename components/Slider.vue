@@ -1,27 +1,42 @@
 <template>
-    <section class="slider" id="about" v-anime="{ opacity: [0, 1], duration: 1200, delay: 400, easing: 'easeInOutSine', loop: false, }">
+    <section class="slider" id="about">
         <b-container>
             <b-row>
                 <b-col>
                     <h2 class="main-title" v-html="$t('home.slider_title')"></h2>
-                    <hooper :settings="sliderSettings">
-                        <slide v-for="(slide, i) in $t('slider')" v-bind:key="i">
-                            <span class="count" v-if="i < 9">0{{i+1}}</span>
-                            <span class="count" v-else>{{i+1}}</span>
-                            <div class="slider-info desktop">
-                                <div class="title" v-html="slide.title"></div>
-                                <div class="subtitle" v-html="slide.subtitle"></div>
-                            </div>
-                            <template v-if="slide.image !== ''">
-                                <SliderImages :name="slide.image"/>
-                                <!-- <img class="img-fluid slide-image" :src="require(`~/assets/images/${slide.image}`)" :alt="slide.title"> -->
-                            </template>
-                            <div class="slider-info mobile">
-                                <div class="subtitle" v-html="slide.subtitle"></div>
-                            </div>
-                        </slide>
-                        <hooper-navigation slot="hooper-addons"></hooper-navigation>
-                    </hooper>
+
+                    <div class="slider-group w-100">
+                        <hooper ref="slider" class="slider-group__center" :settings="sliderSettings">
+                            <slide v-for="(slide, i) in $t('slider')" v-bind:key="i">
+                                <div class="slider-info desktop">
+                                    <div class="navigation">
+                                        <button class="navigation__btn" v-on:click="slidePrev()" v-bind:class="{ isDisabled: slideIndex === 0 }">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
+                                                <path d="M0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97918 12.6066 1.3934C12.0208 0.807612 11.0711 0.807612 10.4853 1.3934L0.93934 10.9393ZM27 10.5L2 10.5V13.5L27 13.5V10.5Z" fill="#0D8CE9"/>
+                                            </svg>
+                                        </button>
+                                        
+                                        <div class="count" v-if="i < 9">0{{i+1}} / {{ +$t('slider').length }}</div>
+                                        <div class="count" v-else>{{i+1}} / {{ +$t('slider').length }}</div>
+                                        
+                                        <button class="navigation__btn" v-on:click="slideNext()" v-bind:class="{ isDisabled: slideIndex === ( (+$t('slider').length) + (-1)) }">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
+                                                <path d="M26.0607 13.0607C26.6464 12.4749 26.6464 11.5251 26.0607 10.9393L16.5147 1.3934C15.9289 0.807612 14.9792 0.807612 14.3934 1.3934C13.8076 1.97918 13.8076 2.92893 14.3934 3.51472L22.8787 12L14.3934 20.4853C13.8076 21.0711 13.8076 22.0208 14.3934 22.6066C14.9792 23.1924 15.9289 23.1924 16.5147 22.6066L26.0607 13.0607ZM0 13.5L25 13.5V10.5L0 10.5L0 13.5Z" fill="#0D8CE9"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="title" v-html="slide.title"></div>
+                                    <div class="subtitle" v-html="slide.subtitle"></div>
+                                </div>
+                                <template v-if="slide.image !== ''">
+                                    <SliderImages :name="slide.image"/>
+                                </template>
+                                <div class="slider-info mobile">
+                                    <div class="subtitle" v-html="slide.subtitle"></div>
+                                </div>
+                            </slide>
+                        </hooper>
+                    </div>
                 </b-col>
             </b-row>
         </b-container>
@@ -30,70 +45,69 @@
 
 <script>
 import SliderImages from "@/components/SliderImages.vue"
-import { Hooper, Slide, Pagination as HooperPagination, Navigation as HooperNavigation } from 'hooper'
+import { Hooper, Slide } from 'hooper'
 import 'hooper/dist/hooper.css'
 
 export default {
     components: {
         Hooper,
         Slide,
-        HooperPagination,
-        HooperNavigation,
         SliderImages
     },
     data() {
       return {
+        slideIndex: 0,
         sliderSettings: {
             infiniteScroll: false,
             autoPlay: false,
             wheelControl: false,
             mouseDrag: false,
+            touchDrag: false,
+            keysControl: false,
             transition: 0,
             itemsToShow: 1,
             centerMode: true
         }
       }
     },
+    methods: {
+        slidePrev() {
+            if (this.slideIndex !== 0) {
+                this.$refs.slider.slidePrev();
+                this.slideIndex--;
+            }
+        },
+        slideNext() {
+            if (this.slideIndex < ( (+this.$t('slider').length) + (-1))) {
+                this.$refs.slider.slideNext();
+                this.slideIndex++;
+            }
+        }
+    }
 }
 </script>
 
 <style lang="scss">
 .slider {
-    background: url(~~/assets/images/slider-bg-01.svg) no-repeat top left, url(~~/assets/images/slider-bg-02.svg) no-repeat top right;
-    background-size: auto 100%, 10%;
-    min-height: 895px;
+    background: url(~~/assets/images/slider-bg-01.svg) no-repeat bottom left, url(~~/assets/images/slider-bg-02.svg) no-repeat top right;
+    background-size: auto, 10%;
+    min-height: 750px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    .after-body {
-        margin-bottom: 60px;
-        text-align: right;
-
-        @media all and (min-width: 2250px){margin-bottom: 80px;text-align: left;}
-        @media all and (max-width: 990px){margin-top: 120px; margin-bottom: 40px}
-        @media all and (max-width: 560px){margin-top: 70px; margin-bottom: 30px}
-        @media all and (max-width: 470px){text-align: left;}
-        @media all and (max-width: 400px){margin-top: 40px; margin-bottom: 10px}
-    }
-    .after {
-        margin-left: auto;
-        margin-right: 0;
-        display: inline-block;
-        text-align: center;
-        font-size: 19px;
-        line-height: 1.2em;
-        color: #fff;
+    
+    @media all and (min-width: 1600px) {
+        min-height: 805px;
     }
 
     /* @media all and (max-width: 1500px) {min-height: 875px;background-position: bottom left, top right; background-size: 100% 100%, 10%;} */
 
     .main-title {
-        font-size: 46px;
+        font-size: 42px;
         line-height: 1.3em;
         color: #000000;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
         text-align: center;
 
         .colored {
@@ -101,42 +115,34 @@ export default {
         }
     }
 
+    .navigation {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 0 20px;
+        @media all and (max-width: 990px) {margin: 5px 0 60px;}
+        @media all and (max-width: 490px) {margin: 15px 0 40px;}
+
+        &__btn + .navigation__btn {margin-left: 20px;}
+        &__btn {box-shadow: none;border: none;background: transparent;transition: .3s; &:hover {opacity:.75;}}
+        &__btn.isDisabled {pointer-events: none;opacity: .25;}
+    }
+
     .hooper {
         height: auto;
         min-height: 475px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media all and (max-width: 1400px) and (min-width: 1300px){margin-left: 5%}
+        @media all and (max-width: 1300px) and (min-width: 1105px){margin-left: 10%}
+        @media all and (max-width: 1105px) and (min-width: 990px){margin-left: 12.5%}
 
         .hooper-track {
             align-items: center;
-        }
-        .hooper-navigation {
-            position: absolute;
-            max-width: 120%;
-            width: 120%;
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: -10%;
-            
-            @media all and (max-width: 1540px) and (min-width: 768px){.hooper-prev {left: 45px;}}
-
-            button {
-                padding: 0;
-                opacity: 1;
-                    
-                svg {
-                    width: 64px;
-                    height: 64px;
-                    fill: #0D8CE9;
-                    transition: .3s;
-                }
-                    
-                &:hover {
-                    svg {
-                            fill: #0764a7;
-                    }
-                }
-            }
         }
 
         .hooper-slide {
@@ -147,10 +153,11 @@ export default {
 
             .svg-image {
                 margin-left: auto; margin-right: 0;
-                max-width: 40%;
+                max-width: 47.5%;
                 width: 100%;
 
                 svg {max-width: 100%; width: 100%; max-height: 30vw;height: 100%; margin-left: auto; margin-right: 0; display: block;}
+                @media all and (min-width: 1890px) {svg {max-height: 25vw;}}
                 svg .lay-01 {opacity: 0; transform: scale(0.45);transition: 0.75s}
                 svg .lay-02, svg .lay-03, svg .lay-04 {opacity: 0;transition: 1.5s;}
             }
@@ -173,7 +180,8 @@ export default {
             }
 
             &.is-current {
-                .title {transition-delay: 0.35s}
+                .navigation {transition-delay: 0s}
+                .title {transition-delay: 0.4s}
                 .subtitle {transition-delay: 0.7s}
                 .title, .subtitle {opacity: 1}
 
@@ -194,13 +202,10 @@ export default {
             }
         }
         .count {
-            font-size: 32px;
-            font-weight: 600;
-            color: #000;
-            opacity: 0;
-            position: absolute;
-            top: 20px;
-            right: 0px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #8C8C8C;
+            margin: auto 13px;
         }
         .slide-image {
             display: block;
@@ -209,9 +214,11 @@ export default {
         }
         .slider-info {
             display: inline-flex;
+            justify-content: flex-start;
             width: 50%;
             flex-direction: column;
             position: relative;
+            @media all and (min-width: 990px) {min-height: 300px;}
 
             .title {
                 font-size: 34px;
@@ -226,7 +233,7 @@ export default {
                 font-size: 21px;
                 line-height: 1.2em;
                 color: #000000;
-                margin-top: 15px;
+                margin-top: 30px;
             }
         }
     }
@@ -242,6 +249,7 @@ export default {
     .slider {
         .main-title {
             font-size: 40px;
+            text-align: left;
         }
     }
     .slider .hooper .hooper-track {
@@ -269,8 +277,6 @@ export default {
     .slider {
         .main-title {
             font-size: 36px;
-            text-align: left;
-            margin-bottom: 25px;
         }
     }
     .slider .hooper div.hooper-navigation {
@@ -285,11 +291,11 @@ export default {
     .slider .hooper .slider-info {
                 
         div.title {
-            font-size: 36px;
+            font-size: 34px;
         }
 
         div.subtitle {
-            font-size: 24px;
+            font-size: 22px;
             width: 80%;
         }
     }
@@ -298,7 +304,7 @@ export default {
 @media all and (max-width: 548px){
     .slider {
         .main-title {
-            font-size: 30px;
+            font-size: 28px;
         }
     }
     .slider .hooper img.slide-image {
@@ -306,7 +312,7 @@ export default {
     }
     .slider .hooper .slider-info {
         div.title {
-            font-size: 30px;
+            font-size: 26px;
         }
         div.subtitle {
             font-size: 18px;
@@ -382,6 +388,22 @@ export default {
         .subtitle {
             display: none
         }
+    }
+}
+
+@media all and (min-width: 680px) and (max-width: 990px) {
+    .hooper .slider-info.mobile {
+        min-height: 320px;
+    }
+}
+@media all and (min-width: 490px) and (max-width: 680px) {
+    .hooper .slider-info.mobile {
+        min-height: 270px;
+    }
+}
+@media all and (min-width: 400px) and (max-width: 490px) {
+    .hooper .slider-info.mobile {
+        min-height: 240px;
     }
 }
 </style>

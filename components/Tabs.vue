@@ -61,12 +61,14 @@
                                     </div>
                                 </template>
 
-                                <ul class="menu" v-if="tab.social_links">
-                                    <li v-for="link in tab.social_links" v-bind:key="link.title">
-                                        <img :src="'/images/icons/'+link.image+'.png'" :alt="link.title" v-if="link.image" />
-                                        <span v-html="link.title"></span>
-                                    </li>
-                                </ul>
+                                <template v-if="tab.social_links">
+                                    <ul class="menu">
+                                        <li v-for="link in tab.social_links" v-bind:key="link.title">
+                                            <img :src="'/images/icons/'+link.image+'.png'" :alt="link.title" v-if="link.image" />
+                                            <span v-html="link.title"></span>
+                                        </li>
+                                    </ul>
+                                </template>
 
                                 <template v-if="tab.notifications">
                                     <div @click="notificationLink(notification.link)" class="notification" v-for="notification in tab.notifications" v-bind:key="notification.title">
@@ -132,10 +134,10 @@ export default {
 
     .main-title {
         color: #000000;
-        font-size: 46px;
+        font-size: 42px;
         font-weight: 400;
         line-height: 1.3em;
-        margin: 40px 0 80px;
+        margin: 30px 0 60px;
 
         .colored {
             color: #0D8CE9;

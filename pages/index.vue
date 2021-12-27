@@ -1,5 +1,5 @@
 <template>
-  <main class="main hide">
+  <main class="main" v-bind:class="{ hide: hideMain }">
     <header class="header">
       <b-container>
         <b-row class="align-items-center">
@@ -121,9 +121,15 @@ export default {
     }
   },
 
+  data() {
+    return {
+      hideMain: true,
+    }
+  },
+
   mounted() {
     setTimeout(()=>{
-        document.querySelectorAll('body .main').forEach(el=>el.classList.remove('hide'))
+      this.hideMain = false
     }, 425)
   },
 
