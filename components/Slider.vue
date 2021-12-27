@@ -138,9 +138,9 @@ export default {
         flex-direction: column;
         justify-content: center;
 
-        @media all and (max-width: 1400px) and (min-width: 1300px){margin-left: 5%}
-        @media all and (max-width: 1300px) and (min-width: 1105px){margin-left: 10%}
-        @media all and (max-width: 1105px) and (min-width: 990px){margin-left: 12.5%}
+        @media all and (max-width: 1400px) and (min-width: 1300px){width: 95%; margin-left: auto; margin-right: 0;}
+        @media all and (max-width: 1300px) and (min-width: 1105px){width: 90%; margin-left: auto; margin-right: 0;}
+        @media all and (max-width: 1105px) and (min-width: 990px){width: 87.5%; margin-left: auto; margin-right: 0;}
 
         .hooper-track {
             align-items: center;
