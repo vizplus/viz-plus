@@ -125,6 +125,7 @@ export default {
         @media all and (max-width: 990px) {margin: 5px 0 60px;}
         @media all and (max-width: 490px) {margin: 15px 0 40px;}
 
+        .count {min-width: 60px;display: flex;align-items: center;justify-content: center;}
         &__btn + .navigation__btn {margin-left: 20px;}
         &__btn {box-shadow: none;border: none;background: transparent;transition: .3s; &:hover {opacity:.75;}}
         &__btn.isDisabled {pointer-events: none;opacity: .25;}
