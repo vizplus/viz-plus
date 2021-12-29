@@ -123,9 +123,10 @@ export default {
         justify-content: flex-start;
         margin: 0 0 20px;
         @media all and (max-width: 990px) {margin: 5px 0 60px;}
-        @media all and (max-width: 490px) {margin: 15px 0 40px;}
+        @media all and (max-width: 540px) {margin: 10px 0 30px; svg{max-width: 30px;}}
 
         .count {min-width: 60px;display: flex;align-items: center;justify-content: center;}
+        @media all and (max-width: 540px) {.count {min-width: 40px}}
         &__btn + .navigation__btn {margin-left: 20px;}
         &__btn {box-shadow: none;border: none;background: transparent;transition: .3s; &:hover {opacity:.75;}}
         &__btn.isDisabled {pointer-events: none;opacity: .25;}
@@ -207,6 +208,10 @@ export default {
             font-weight: 500;
             color: #8C8C8C;
             margin: auto 13px;
+            
+            @media all and (max-width: 540px){
+                font-size: 16px;
+            }
         }
         .slide-image {
             display: block;
@@ -313,7 +318,7 @@ export default {
     }
     .slider .hooper .slider-info {
         div.title {
-            font-size: 26px;
+            font-size: 24px;
         }
         div.subtitle {
             font-size: 18px;
