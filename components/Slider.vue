@@ -146,6 +146,8 @@ export default {
         @media all and (max-width: 1300px) and (min-width: 1105px){width: 90%; margin-left: auto; margin-right: 0;}
         @media all and (max-width: 1105px) and (min-width: 990px){width: 87.5%; margin-left: auto; margin-right: 0;}
 
+        &:focus, &:focus-visible, &:focus-within, &:active {border: none; box-shadow: none; outline: none;}
+
         .hooper-track {
             align-items: center;
         }
