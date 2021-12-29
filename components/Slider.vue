@@ -326,7 +326,7 @@ export default {
     .slider .hooper img.slide-image {
         max-height: 215px;
     }
-    .slider .hooper .hooper-slide .svg-image {max-width: 80%; svg{max-height: 45vh}}
+    .slider .hooper .hooper-slide .svg-image {max-width: 80%; svg{max-height: 35vh}}
     .slider .hooper .slider-info {
         div.title {
             font-size: 24px;
