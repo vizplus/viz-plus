@@ -8,7 +8,7 @@
                     <div class="slider-group w-100">
                         <hooper ref="slider" class="slider-group__center" :settings="sliderSettings">
                             <slide v-for="(slide, i) in $t('slider')" v-bind:key="i">
-                                <div class="slider-info desktop">
+                                <div class="slider-info" v-bind:class="{ nosubtitle: !slide.subtitle }">
                                     <div class="navigation">
                                         <button class="navigation__btn" v-on:click="slidePrev()" v-bind:class="{ isDisabled: slideIndex === 0 }">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
@@ -26,14 +26,11 @@
                                         </button>
                                     </div>
                                     <div class="title" v-html="slide.title"></div>
-                                    <div class="subtitle" v-html="slide.subtitle"></div>
+                                    <div class="subtitle" v-html="slide.subtitle" v-if="slide.subtitle"></div>
                                 </div>
                                 <template v-if="slide.image !== ''">
                                     <SliderImages :name="slide.image"/>
                                 </template>
-                                <div class="slider-info mobile">
-                                    <div class="subtitle" v-html="slide.subtitle"></div>
-                                </div>
                             </slide>
                         </hooper>
                     </div>
@@ -279,11 +276,12 @@ export default {
         margin: 30px auto 25px;
         max-height: 350px;
     }
+    .slider .hooper .hooper-slide .svg-image {max-width: 80%; width: 100%; margin-left: auto; margin-right: 0; svg{max-height:60vh} }
     .slider .hooper .slider-info {
         width: 100%;
         
         div.subtitle {
-            width: 70%;
+            width: 100%;
             margin-left: auto;
             margin-right: 0;
         }
@@ -301,19 +299,20 @@ export default {
         width: 108%;
         left: -5%;
     }
+    .slider .hooper .hooper-slide .svg-image {max-width: 80%; svg{max-height: 55vh}}
     .slider .hooper img.slide-image {
         max-height: 300px;
         max-width: 85%;
     }
     .slider .hooper .slider-info {
-                
+                &.nosubtitle {margin-bottom: 70px;}
         div.title {
-            font-size: 34px;
+            font-size: 32px;
         }
 
         div.subtitle {
-            font-size: 22px;
-            width: 80%;
+            font-size: 21px;
+            width: 100%;
         }
     }
 }
@@ -325,14 +324,15 @@ export default {
         }
     }
     .slider .hooper img.slide-image {
-        max-height: 225px;
+        max-height: 215px;
     }
+    .slider .hooper .hooper-slide .svg-image {max-width: 80%; svg{max-height: 45vh}}
     .slider .hooper .slider-info {
         div.title {
             font-size: 24px;
         }
         div.subtitle {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 }
@@ -341,8 +341,6 @@ export default {
 
 @media all and (max-width: 990px) {
     section.slider {
-        background: url(~~/assets/images/slide-mobile-bg.svg) no-repeat bottom center;
-        background-size: contain;
         min-height: 925px;
 
         .after {
@@ -354,6 +352,8 @@ export default {
 
 @media all and (max-width: 768px) {
     section.slider {
+        background: url(~~/assets/images/slide-mobile-bg.svg) no-repeat bottom center;
+        background-size: contain;
         min-height: 915px;
 
         .after {
@@ -376,23 +376,10 @@ export default {
 
 @media all and (max-width: 548px) {
     section.slider {
-        min-height: 755px;
-
-        .after {
-            font-size: 18px;
-            bottom: -50px;
-        }
+        min-height: 715px;
     }
 }
 
-@media all and (max-width: 436px) {
-    section.slider {
-
-        .after {
-            font-size: 14px;
-        }
-    }
-}
 
 @media all and (min-width: 990px) {
     .hooper .slider-info.mobile {
