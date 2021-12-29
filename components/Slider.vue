@@ -19,7 +19,7 @@
                                         <div class="count" v-if="i < 9">0{{i+1}} / {{ +$t('slider').length }}</div>
                                         <div class="count" v-else>{{i+1}} / {{ +$t('slider').length }}</div>
                                         
-                                        <button class="navigation__btn" v-on:click="slideNext()" v-bind:class="{ isDisabled: slideIndex === ( (+$t('slider').length) + (-1)) }">
+                                        <button class="navigation__btn" v-on:click="slideNext()" v-bind:class="{ first: !slideFirst, isDisabled: slideIndex === ( (+$t('slider').length) + (-1)) }">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" fill="none" viewBox="0 0 27 24">
                                                 <path d="M26.0607 13.0607C26.6464 12.4749 26.6464 11.5251 26.0607 10.9393L16.5147 1.3934C15.9289 0.807612 14.9792 0.807612 14.3934 1.3934C13.8076 1.97918 13.8076 2.92893 14.3934 3.51472L22.8787 12L14.3934 20.4853C13.8076 21.0711 13.8076 22.0208 14.3934 22.6066C14.9792 23.1924 15.9289 23.1924 16.5147 22.6066L26.0607 13.0607ZM0 13.5L25 13.5V10.5L0 10.5L0 13.5Z" fill="#0D8CE9"/>
                                             </svg>
@@ -56,6 +56,7 @@ export default {
     },
     data() {
       return {
+        slideFirst: false,
         slideIndex: 0,
         sliderSettings: {
             infiniteScroll: false,
@@ -81,6 +82,8 @@ export default {
             if (this.slideIndex < ( (+this.$t('slider').length) + (-1))) {
                 this.$refs.slider.slideNext();
                 this.slideIndex++;
+
+                if (!this.slideFirst) { this.slideFirst = true; }
             }
         }
     }
@@ -130,6 +133,7 @@ export default {
         &__btn + .navigation__btn {margin-left: 20px;}
         &__btn {box-shadow: none;border: none;background: transparent;transition: .3s; &:hover {opacity:.75;}}
         &__btn.isDisabled {pointer-events: none;opacity: .25;}
+        &__btn.first svg {animation: .825s linear .825s infinite alternate arrowFirst;}
     }
 
     .hooper {
@@ -247,6 +251,11 @@ export default {
     .is-disabled {
         display: none;
     }
+}
+
+@keyframes arrowFirst {
+ from { transform: scale(1, 1); }
+ to { transform: scale(1.4, 1.4); }
 }
 
 /* slider media */
