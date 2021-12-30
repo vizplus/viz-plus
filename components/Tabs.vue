@@ -1,5 +1,5 @@
 <template>
-    <section class="tabs" id="guide">
+    <section class="tabs">
         <b-container>
             <b-row>
                 <b-col>

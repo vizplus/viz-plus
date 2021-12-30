@@ -51,9 +51,10 @@
       </b-container>
     </section>
 
-    <Tabs/>
-    
-    <TabsMobile/>
+    <section id="guide">
+      <Tabs/>
+      <TabsMobile/>
+    </section>
 
     <footer class="footer">
       <b-container fluid>
