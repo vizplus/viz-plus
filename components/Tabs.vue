@@ -230,7 +230,7 @@ export default {
         &::after {
             content: '';
             background: #0D8CE9;
-            opacity: .85;
+            opacity: .375;
             border-radius: 100%;
             max-width: 100%;
             width: 214px;

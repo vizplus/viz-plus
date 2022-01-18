@@ -1,5 +1,7 @@
 export default async (context, locale) => {
 
+    let title = 'Что такое ВИЗ?';
+
     let home = {
         'entry_title': 'Начните пользоваться <br>своим социальным капиталом!',
         'entry_subtitle': 'Как завоёвывать друзей и оказывать влияние на людей <br>без лайков и донатов?',
@@ -91,7 +93,7 @@ export default async (context, locale) => {
         },
         {
             'title': 'В ВИЗе много других возможностей, о которых вы узнаете, когда начнёте его использовать.',
-            'subtitle': '<span class="colored big">Например, прямо сейчас!</span>',
+            'subtitle': '<span class="colored big">Например, <a class="link" href="#guide">прямо сейчас!</a></span>',
             'image': 'slider_16',
         },
     ];
@@ -406,7 +408,25 @@ export default async (context, locale) => {
         }
 
     ];
-
+    
+    let viz_list = [
+        {
+            'name': 'Первый аккаунт',
+            'link': 'https://start.viz.plus/',
+        },
+        {
+            'name': 'Личный кабинет',
+            'link': 'https://my.viz.plus/',
+        },
+        {
+            'name': 'База знаний',
+            'link': 'https://about.viz.plus/',
+        },
+        {
+            'name': 'Обозреватель',
+            'link': 'https://info.viz.plus/',
+        },
+    ];
     let footer_links = [
         {
             'name': 'Telegram по вопросам ',
@@ -415,6 +435,6 @@ export default async (context, locale) => {
     ];
 
     return {
-        home, slider, advantages, tabs, footer_links
+        title, home, slider, advantages, tabs, viz_list, footer_links
     }
 }

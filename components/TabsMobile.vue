@@ -350,7 +350,7 @@ export default {
                 top: 40%;
                 right: -70px;
                 z-index: 1;
-                opacity: .85;
+                opacity: .375;
             }
 
             .before-circle {
@@ -363,7 +363,7 @@ export default {
                 bottom: -50px;
                 left: -40px;
                 z-index: 1;
-                opacity: .85;
+                opacity: .375;
             }
 
             .carousel {

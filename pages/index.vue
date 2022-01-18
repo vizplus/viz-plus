@@ -59,10 +59,15 @@
     <footer class="footer">
       <b-container fluid>
         <b-row>
-          <b-col>
+          <b-col cols="12" sm="12" md="12" lg="3" xl="4">
             <span class="logo">VIZ+</span>
           </b-col>
-          <b-col class="text-right">
+          <b-col cols="12" sm="12" md="12" lg="9" xl="8" class="right-col">
+            <ul class="viz-list">
+              <li v-for="link in $t('viz_list')" v-bind:key="link.name">
+                <a class="link" :href="link.link" target="_blank" v-html="link.name"></a>
+              </li>
+            </ul>
             <a class="tg-link link" target="_blank" :href="link.link" v-for="(link, i) in $t('footer_links')" v-bind:key="i">
               {{link.name}}
             </a>
@@ -86,6 +91,15 @@ export default {
   components: {
         Slider, Tabs, TabsMobile
   },
+  head() {
+    return {
+      title: this.$t('title'),
+      htmlAttrs: {
+          lang: this.$i18n.locale,
+      }
+    };
+  },
+  
   transition: {
     name: 'slide',
     mode: 'out-in',
@@ -264,6 +278,31 @@ body {
   .row {
     align-items: flex-end;
   }
+  .right-col {
+    text-align: right;
+  }
+  .viz-list {
+    padding: 0;
+    margin: 0 0 15px;
+    display: flex;
+    justify-content: flex-end;
+
+    li + li {margin-left: 12.5px}
+
+    li {
+      list-style: none;
+      display: inline-flex;
+
+      .link {
+        border-bottom: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.875em;
+
+        &:hover {text-decoration: underline;}
+      }
+    }
+  }
 
   .link {
     position: relative;
@@ -273,6 +312,7 @@ body {
     line-height: 1.3em;
     border-bottom: 1px solid #fff;
     transition: .2s;
+    display: inline-flex;
     
     &.tg-link::after {content: '';position: absolute;top: -5px;left: -40px;width: 38px;height: 38px;background: url(~~/assets/images/tg-planer.svg) no-repeat center center;}
     &.mail-link::after {content: '';position: absolute;top: 0;left: -37.5px;width: 34px;height: 34px;background: url(~~/assets/images/i-mail.svg) no-repeat center center;}
@@ -282,11 +322,8 @@ body {
       text-decoration: none;
     }
   }
-  .link + .link {
-    margin-left: 10px;
-  }
   .email {
-    margin-top: 7.5px;
+    display: inline-flex;
   }
   .logo {
     color: #fff;
@@ -294,6 +331,12 @@ body {
     font-weight: bold;
     font-size: 92px;
     line-height: 1.4rem;
+  }
+}
+
+@media all and (min-width: 570px){
+  .footer .email {
+     margin-left: 45px;
   }
 }
 
@@ -311,6 +354,11 @@ body {
     .subtitle {
       font-size: 18px;
     }
+  }
+  .footer {
+    .right-col {text-align: left;}
+    .viz-list {margin: 30px 0 15px;justify-content: flex-start;}
+    .tg-link.link {margin-left: 30px}
   }
 }
 
@@ -351,6 +399,18 @@ body {
     .logo {
       font-size: 64px;
     }
+  }
+}
+
+@media all and (max-width: 690px) {
+  .footer {
+    .viz-list {flex-direction: column; li + li {margin-left: 0px}}
+  }
+}
+
+@media all and (max-width: 670px) {
+  .footer {
+    .email {display: flex; margin: 10px 0 0 30px}
   }
 }
 
@@ -409,6 +469,7 @@ body {
     }
     .link {
       font-size: 16px;
+      margin-left: 0!important;
 
        &.tg-link::after, &.mail-link::after {left: unset; top: -7.5px; right: -40px;}
     }
@@ -417,13 +478,14 @@ body {
       margin-top: 24px;
     }
     .email {
-      margin-top: 24px;
+      margin-left: 0;
+      margin-top: 12px;
     }
     .logo {
       font-size: 70px;
       display: block;
       width: 100%;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
   }
 }
