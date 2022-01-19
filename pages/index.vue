@@ -166,7 +166,7 @@ export default {
     this.advantages = await fetch(
       `https://info.viz.plus/ajax/stats/`
     ).then(res => res.json())
-  }
+  },
 }
 </script>
 
