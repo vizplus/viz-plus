@@ -100,15 +100,15 @@ export default async (context, locale) => {
     
     let advantages = [
         {
-            'title': '588',
-            'subtitle': 'активных <br>пользователей за 30 дней'
+            'title': 'accounts_30',
+            'subtitle': 'активных <br>пользователей за 30&nbsp;дней'
         },
         {
-            'title': '2719',
+            'title': 'trx_1',
             'subtitle': 'транзакций <br>в сутки'
         },
         {
-            'title': '$313070',
+            'title': 'supply_value',
             'subtitle': 'размер <br>визономики <br>прямо сейчас'
         },
         {

@@ -56,12 +56,6 @@ export default {
     strategy: 'prefix_except_default',
     locales: [
       {
-        code: 'en',
-        iso: 'en-US',
-        name: 'English',
-        file: 'en-US.js',
-      },
-      {
         code: 'ru',
         iso: 'ru-RU',
         name: 'Russian',

@@ -9,8 +9,8 @@
           <b-col>
             <div class="lang-switch text-right">
               <nuxt-link :to="switchLocalePath('ru')">RU</nuxt-link>
-              <span>/</span>
-              <nuxt-link :to="switchLocalePath('en')">ENG</nuxt-link>
+              <!--<span>/</span>
+              <nuxt-link :to="switchLocalePath('en')">ENG</nuxt-link>-->
             </div>
           </b-col>
         </b-row>
@@ -44,7 +44,10 @@
       <b-container>
         <b-row>
           <b-col v-for="(advantage, i) in $t('advantages')" v-bind:key="i">
-            <div class="title" v-html="advantage.title"></div>
+            <div class="title" v-html="`1,5`" v-if="advantage.title === `1,5`"></div>
+            <div class="title" v-html="`$`+advantages[advantage.title]" v-else-if="advantage.title === `supply_value`"></div>
+            <div class="title" v-html="advantages[advantage.title]" v-else></div>
+
             <div class="subtitle" v-html="advantage.subtitle"></div>
           </b-col>
         </b-row>
@@ -139,6 +142,7 @@ export default {
   data() {
     return {
       hideMain: true,
+      advantages: [],
     }
   },
 
@@ -149,6 +153,12 @@ export default {
   },
 
   methods: {
+  },
+
+  async fetch() {
+    this.advantages = await fetch(
+      `https://info.viz.plus/ajax/stats/`
+    ).then(res => res.json())
   }
 }
 </script>
