@@ -1,6 +1,10 @@
 export default async (context, locale) => {
 
-    let title = 'Что такое ВИЗ?';
+    let meta = {
+        'title': 'Что такое ВИЗ?',
+        'description': 'Понятное объяснение в картинках.',
+        'image': '/meta-image.png'
+    };
 
     let home = {
         'entry_title': 'Начните пользоваться <br>своим социальным капиталом!',
@@ -435,6 +439,6 @@ export default async (context, locale) => {
     ];
 
     return {
-        title, home, slider, advantages, tabs, viz_list, footer_links
+        meta, home, slider, advantages, tabs, viz_list, footer_links
     }
 }

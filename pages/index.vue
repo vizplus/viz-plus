@@ -96,10 +96,17 @@ export default {
   },
   head() {
     return {
-      title: this.$t('title'),
+      title: this.$t('meta.title'),
       htmlAttrs: {
           lang: this.$i18n.locale,
-      }
+      },
+      meta: [
+        { hid: 'description', name: 'description', content: this.$t('meta.description') },
+        { hid: 'og:description', property: 'og:description', content: this.$t('meta.description') },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.$t('meta.description') },
+        { hid: 'og:image', property: 'og:image', content: this.$t('meta.image') },
+        { hid: 'twitter:image', name: 'twitter:image', content: this.$t('meta.image') },
+      ],
     };
   },
   
