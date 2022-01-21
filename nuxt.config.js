@@ -1,5 +1,3 @@
-import VueI18n from 'vue-i18n'
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
