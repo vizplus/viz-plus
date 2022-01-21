@@ -43,7 +43,6 @@
     <section class="advantages">
       <b-container>
         <b-row>
-          <div v-html="advantages.supply"></div>
           <b-col v-for="(advantage, i) in $t('advantages')" v-bind:key="i">
             <div class="title" v-html="`1,5`" v-if="advantage.title === `1,5`"></div>
             <div class="title" v-html="`$`+advantages[advantage.title]" v-else-if="advantage.title === `supply_value`"></div>
