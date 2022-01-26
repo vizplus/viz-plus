@@ -9,8 +9,8 @@
           <b-col>
             <div class="lang-switch text-right">
               <nuxt-link :to="switchLocalePath('ru')">RU</nuxt-link>
-              <!--<span>/</span>
-              <nuxt-link :to="switchLocalePath('en')">ENG</nuxt-link>-->
+              <span>/</span>
+              <nuxt-link :to="switchLocalePath('en')">ENG</nuxt-link>
             </div>
           </b-col>
         </b-row>

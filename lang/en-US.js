@@ -1,16 +1,16 @@
 export default async (context, locale) => {
 
     let meta = {
-        'title': 'Что такое ВИЗ?',
-        'description': 'Понятное объяснение в картинках.',
-        'image': '/meta-image.png'
+        'title': 'What is VIZ?',
+        'description': 'Clear explanation in pictures.',
+        'image': '/meta-image-en.png'
     };
 
     let home = {
         'entry_title': 'Start using <br>your social capital!',
-        'entry_subtitle': 'How to win friends and influence people <br>without likes and donations?',
-        'read_more': 'Read more',
-        'connect': 'Connect',
+        'entry_subtitle': 'How to win friends and influence people - no likes, no donations!',
+        'read_more': 'Learn more',
+        'connect': 'Join',
         'slider_title': 'What is <span class="colored">VIZ</span>?',
         'slider_after': 'Explanation in pictures. <br>Click on the arrows',
         'tabs_title': '<span class="colored">VIZ</span> step by step',
@@ -21,82 +21,82 @@ export default async (context, locale) => {
 
     let slider = [
         {
-            'title': 'VIZ is a new layer of the Internet and a new economy for an important part of your life',
+            'title': 'VIZ is a new layer of the Internet and a new economy for your life',
             'subtitle': '',
             'image': 'slider_01',
         },
         {
-            'title': 'When you do something for others, <span class="colored">people appreciate you</span>',
-            'subtitle': 'Likes, thanks, applause, upvotes and thumbs up are expressions of gratitude',
+            'title': 'You do something for others - <span class="colored">people are grateful to you</span>',
+            'subtitle': 'Likes, thanks, applause, pros and thumbs up are expressions of gratitude',
             'image': 'slider_02',
         },
         {
-            'title': 'Total thanks from many people - <span class="colored">your social capital</span>',
-            'subtitle': 'The more people thank you, the greater your social capital',
+            'title': 'Thanks from many people is <span class="colored">your social capital</span>',
+            'subtitle': 'The more people are grateful to you, the greater your social capital',
             'image': 'slider_03',
         },
         {
-            'title': 'VIZ translates <span class="colored">social capital into numbers</span>',
-            'subtitle': 'Every like and every thank you increases your digital social capital in VIZ',
+            'title': 'VIZ transforms <span class="colored">social capital into numbers</span>',
+            'subtitle': 'Every like and every thank increase your digital social capital in VIZ',
             'image': 'slider_04',
         },
         {
-            'title': 'Accumulate and use social capital <span class="colored">where you like it</span>',
-            'subtitle': 'VIZ account can be connected to social networks, instant messengers, websites, apps, games and real life',
+            'title': 'Accumulate and use social capital <span class="colored">wherever it is convenient</span>',
+            'subtitle': 'The VIZ account can be connected to social networks, messengers, websites, applications, games and real life',
             'image': 'slider_05',
         },
         {
-            'title': 'Your social capital will <span class="colored">save</span> no matter what',
-            'subtitle': 'If your account on a social network or messenger is blocked, it will not affect your accumulated social capital',
+            'title': 'Your social capital is <span class="colored">saved</span>, no matter what',
+            'subtitle': 'If your social network or messenger account is blocked, it will not affect the social capital you have accumulated',
             'image': 'slider_06',
         },
         {
             'title': 'When you thank others, their social capital <span class="colored">increases</span>',
-            'subtitle': 'Freely support anyone you like who brings you benefit or pleasure',
+            'subtitle': 'Freely support anyone you like, those, who gives you benefits or pleasure',
             'image': 'slider_07',
         },
         {
-            'title': 'Your social capital doesn`t decrease, you <span class="colored">give nothing away</span>',
-            'subtitle': 'Rewards come from a constant relatively small supply on the blockchain',
+            'title': 'At the same time, your social capital does not decrease, you <span class="colored">do not give up anything</span>',
+            'subtitle': 'Rewards are taken from a constant relatively small emission in the blockchain',
             'image': 'slider_08',
         },
         {
-            'title': 'By rewarding others you motivate them to do something <span class="colored">useful or enjoyable for you</span>',
-            'subtitle': 'People are more likely to respond to big thanks. Influence those you like',
+            'title': 'By rewarding others, you motivate them to do something <span class="colored">useful or pleasant for you</span>',
+            'subtitle': 'People are more willing to respond to a larger gratitude. Influence those you like',
             'image': 'slider_09',
         },
         {
-            'title': 'The more social capital you have, the <span class="colored">stronger</span> you reward',
-            'subtitle': 'Reward a lot of people a little, or a lot of a few',
+            'title': 'The greater your social capital, the more you <span class="colored">reward</span> others',
+            'subtitle': 'Reward many people little by little or reward some with large rewards',
             'image': 'slider_10',
         },
         {
-            'title': 'The more social capital you have <span class="colored">the more willing people are to help you</span>',
-            'subtitle': 'If you do a lot of good for others, they are happy to do more good for you',
+            'title': 'The greater your social capital, <span class="colored">the more willing people are helping you</span>',
+            'subtitle': 'If you bring a lot of benefit to others, they are happy to bring more benefit to you',
             'image': 'slider_11',
         },
         {
-            'title': 'VIZ keeps your social capital on the blockchain',
+            'title': 'VIZ stores your social capital in the blockchain',
             'subtitle': 'Blockchain is a secure system. No one has access to your social capital',
             'image': 'slider_12',
         },
         {
-            'title': 'If you don`t want to build social capital for a long time, <span class="colored">you can buy it</span>',
-            'subtitle': 'Social capital is better than money: it brings benefits without diminishing',
+            'title': 'If there is no desire to increase social capital for a long time, <span class="colored">you can buy it</span>',
+            'subtitle': 'Social capital is better than money: it benefits and does not decrease at the same time',
             'image': 'slider_13',
         },
         {
-            'title': 'Accumulated social capital in VIZ can be <span class="colored">turned into money</span>',
-            'subtitle': 'If you are very popular, sell free capital, monetize your success',
+            'title': 'The accumulated social capital in VIZ might be <span class="colored">turned into money</span>',
+            'subtitle': 'If you are very popular, sell your free capital, monetize the success',
             'image': 'slider_14',
         },
         {
-            'title': 'You can build your business in VIZ <span class="colored">without permissions and restrictions</span>',
-            'subtitle': 'Program, promote, help others use their social capital',
+            'title': 'With VIZ you can build your business <span class="colored">with no limits and restrictions</span>',
+            'subtitle': 'Program, advertise, help others use their social capital',
             'image': 'slider_15',
         },
         {
-            'title': 'VIZ has many other features that you will learn about once you start using it.',
+            'title': 'There are many other possibilities in VIZ, ones you will learn about, when you start using them.',
             'subtitle': '<span class="colored big">For example, <a class="link" href="#guide">right now!</a></span>',
             'image': 'slider_16',
         },
@@ -104,28 +104,28 @@ export default async (context, locale) => {
     
     let advantages = [
         {
-            'title': '588',
-            'subtitle': 'active <br>users in 30 days'
+            'title': 'accounts_30',
+            'subtitle': 'active <br>users in 30nbsp;days'
         },
         {
-            'title': '2719',
+            'title': 'trx_1',
             'subtitle': 'transactions <br>per day'
         },
         {
-            'title': '$313070',
-            'subtitle': 'size of <br>VIZonomy <br>right now'
+            'title': 'supply_value',
+            'subtitle': 'size of <br>VIZonomics <br>right now'
         },
         {
             'title': '1,5',
-            'subtitle': 'seconds - <br>average transaction time'
+            'subtitle': 'seconds is the average transaction time'
         }
     ];
 
     let tabs = [
         {
             'name': 'Your account',
-            'title': 'First account - <br>at our expense!',
-            'content': '<p>The account stores your social capital, which you will use to receive and distribute rewards. </p><p>On a special secure page, we launched a service for quick and free account creation. At the same time, you will also learn a little more about how VIZ works there.</p>',
+            'title': 'Do not pay for the first account!',
+            'content': '<p>The account stores your social capital, which is what you will use to receive and distribute rewards. </p><p>On a special secure page, we have launched a service for quick and free account creation. At the same time, there you will learn a little more about how VIZ works.</p>',
             'notifications': [
                 {
                     'source': 'start.viz.plus',
@@ -135,34 +135,34 @@ export default async (context, locale) => {
             ]
         },
         {
-            'name': 'My account',
-            'title': 'Connect account to Dashboard',
-            'content': '<p>My account shows you your social capital status and other parameters, and also helps you make transfers, participate in the community, buy and sell tokens, create an account and much more.</p> <p>Log in , enter your account name and active private key to access your transactions. Look around, surf the pages, check out the features of the app, complete your account profile if you like.</p>',
+            'name': 'Private Office',
+            'title': 'Connect your account to your Private Office',
+            'content': '<p>Private Office shows you the status of your social capital and other parameters, and also helps you make transfers, participate in community life, buy and sell tokens, create an account and much more.</p> <p>Log in, enter the account name and the active private key to access operations. Take a look around, go through the pages, familiarize yourself with the functions of the application, fill out your account profile if you wish.</p>',
             'notifications': [
                 {
                     'source': 'my.viz.plus',
-                    'title': 'My Account',
+                    'title': 'Private Office',
                     'link': 'https://my.viz.plus/',
                 },
             ]
         },
         {
             'name': 'VIZonator',
-            'title': 'VIZ your browser',
-            'content': '<p>VIZ`s magic happens where you communicate or receive information: on website pages, in chats and applications.</p><p>By connecting VIZ to a browser (desktop only), you can reward and receive rewards directly on popular sites in just one click. In addition, VIZonator performs many functions of the Personal Account.</p> <p>Unfortunately, browsers on phones do not support extensions.</p>',
+            'title': 'VIZonate your browser',
+            'content': '<p>The magic of VIZ happens where you communicate or receive information: on the pages of the web, in chat rooms and applications.</p><p>By connecting VIZ to the browser (PC only), you will be able to award and receive rewards directly on popular sites in just click. In addition, Vizonator allows many functions of a Private Office.</p> <p>Unfortunately, mobile browsers do not support extensions.</p>',
             'custom_links': [
                 {
                     'image': 'chrome.svg',
-                    'title': 'Download Chrome Extension',
+                    'title': 'Download an extension for Chrome',
                     'url': 'https://chrome.google.com/webstore/detail/vizonator/iehoehfkanaobnbldjfjfabbpaiiojnp',
                 },
                 {
                     'image': 'firefox.svg',
-                    'title': 'Download Firefox Extension',
+                    'title': 'Download an extension for Firefox',
                     'url': 'https://addons.mozilla.org/en/firefox/addon/vizonator/',
                 }
             ],
-            'notification_message': 'Sites VIZonator works on:',
+            'notification_message': 'Sites where VIZonator works:',
             'social_links': [
                 {
                     'title': 'twitter.com',
@@ -195,9 +195,9 @@ export default async (context, locale) => {
             ],
         },
         {
-            'name': 'Telegram bot',
-            'title': 'VIZify your Telegram',
-            'content': '<p>Award the channel author for a great post? One click. Thank the commentator in the chat for a useful hint? Start your answer with "thank you". The telegram bot will do the rest - just connect your VIZ account to it.</p> <p>If you run a Telegram channel or own a chat, start building your social capital: connect the VIZ bot so that people can reward you .</p>',
+            'name': 'Telegram Bot',
+            'title': 'VIZonate your Telegram',
+            'content': '<p>Wish to reward the channel author for an outstanding post? Click. Wish to thank the commentator in the chat for a useful hint? Start the answer with "thank you." The telegram bot will do the rest - just connect your VIZ account to it.</p> <p>If you run a Telegram channel or own a chat, start building up your social capital: connect a VIZ bot so that people can reward you.</p>',
             'notifications_after_content': [
                 {
                     'icon': 'telegram',
@@ -206,65 +206,32 @@ export default async (context, locale) => {
                     'link': 'https://t.me/viz_social_bot/',
                 },
             ],
-            'notification_message': 'Some Telegram channels and chats with connected VIZ bot:',
-            'notifications': [
-                {
-                    'icon': 'telegram',
-                    'title': 'Yewprint',
-                    'message': 'Small author`s channel. Notes on science, culture, quotes from books, interesting pictures from the Internet and offline, other little things in life',
-                    'link': 'https://t.me/tisnu_channel',
-                },
-                {
-                    'icon': 'telegram',
-                    'title': 'Web 3.0',
-                    'message': 'News, analytics, links, videos about the development of the new Internet. The author is one of the most famous Russian analysts in the field of blockchain technologies (Menaskop).',
-                    'link': 'https://t.me/web3news',
-                },
-                {
-                    'icon': 'telegram',
-                    'title': 'Mishka DJ',
-                    'message': 'New music and mixed content every day.',
-                    'link': 'https://t.me/mishkadj',
-                },
-                {
-                    'icon': 'telegram',
-                    'title': 'Teal Community',
-                    'message': 'Russian-speaking turquoise community. We want more happy companies that create value.',
-                    'link': 'https://t.me/RussiaTeal',
-                },
-                {
-                    'icon': 'telegram',
-                    'title': 'SYNERGIS :: RUS',
-                    'message': 'Free crypto discussions.',
-                    'link': 'https://t.me/synergis',
-                }
-            ]
         },
         {
-            'name': 'Offline Applications',
+            'name': 'Direct applications',
             'title': 'Download Independence',
-            'content': '<p>Some applications in VIZ work directly with the blockchain and do not require connection to other servers, like regular websites and applications.</p> <p>Such applications always work. For example, if your bank`s servers go down, you won`t be able to access your account either through the website or through the mobile app, and the card will stop working. In a standalone VIZ application connected directly to the blockchain, there is simply nothing to “fall”, it has no servers.</p> <p>The downside of autonomy is limited functionality and not always simple user interaction with the application. Nevertheless, all the main functions are there, and learning how to work with the application a little differently is not so difficult.</p>',
+            'content': `<p>Some VIZ applications work directly with the blockchain and do not require connection to other servers, like regular websites and applications.</p> <p>Such applications always work. For example, if your bank's servers "crash", you will not be able to access the account - either through the website or through the mobile application - and the card will be blocked. In a direct VIZ application connected directly to the blockchain, there is simply nothing to "fall", it does not have servers.</p> <p>The downside of autonomy is limited functionality and a user doesn't always have simple interaction with the application. Nevertheless, all the basic functions are present and it is not difficult to learn how to work with the application in a different way.</p>`,
             'notifications': [
                 {
                     'source': 'viz.direct',
-                    'title': 'Offline personal account',
+                    'title': 'Direct Private Office',
                     'link': 'https://viz.direct/',
                 },
                 {
                     'source': 'readdle.me',
-                    'title': 'Uncensored Social Network',
+                    'title': 'Uncensored social network',
                     'link': 'https://readdle.me/',
                 }
             ]
         },
         {
-            'name': 'Question Answers',
-            'title': 'Learn all the subtleties and features of VIZ',
-            'content': '<p>We`ve prepared a whole subsite for you with information about VIZ, from answers to basic user questions to how to develop new applications and tips for doing business in VIZ.</p>',
+            'name': 'Answers to questions',
+            'title': 'Learn all the details and features of VIZ',
+            'content': '<p>We have prepared for you a whole sub-site with information about VIZ - from answers to basic user questions to instructions for developing new applications and tips for doing business in VIZ.</p>',
             'notifications': [
                 {
                     'source': 'about.viz.plus',
-                    'title': 'VIZ Knowledge Base',
+                    'title': 'VIZ Data Base',
                     'link': 'https://about.viz.plus/',
                 },
             ]
@@ -272,42 +239,12 @@ export default async (context, locale) => {
         {
             'name': 'News and Communication',
             'title': 'Subscribe to channels and chats about VIZ',
-            'content': '<p>VIZ is evolving, new services are constantly being added and existing ones are being updated, so it`s important to stay up to date. Follow the main information resources about VIZ to immediately find out all the news and participate in their discussion.</p>',
-            'notifications': [
-                {
-                    'icon': 'viz_media',
-                    'source': 'viz.media',
-                    'title': 'VIZ Media Platform',
-                    'message': 'Website with news, links and services.',
-                    'link': 'https://viz.media/',
-                },
-                {
-                    'icon': 'viz_world',
-                    'source': 'telegram',
-                    'title': 'VIZ World',
-                    'message': 'First telegram chat about VIZ.',
-                    'link': 'https://t.me/viz_world',
-                },
-                {
-                    'icon': 'viz_plus',
-                    'source': 'telegram',
-                    'title': 'viz+',
-                    'message': 'Telegram chat with information about VIZPLUS projects.',
-                    'link': 'https://t.me/vizplus',
-                },
-                {
-                    'icon': 'viz',
-                    'source': 'telegram',
-                    'title': 'VIZ.Blockchain',
-                    'message': 'Telegram channel with news, announcements and publications.',
-                    'link': 'https://t.me/vizblockchain',
-                },
-            ]
+            'content': '<p>VIZ is developing, new services are constantly appearing and existing ones are updated, so it is important to update all the time. Follow the main information resources about VIZ to immediately find out all the news and participate in their discussion.</p>',
         },
         {
             'name': 'Theory',
-            'title': 'Learn the concept of social capital',
-            'content': '<p>VIZ is not "another crypto", it`s a completely new social concept, a new economy and a new kind of relationship between people in today`s and future society.</p> <p>To truly understand the social capital and prepare for a new era, study the works that formed the basis of VIZ.</p>',
+            'title': 'Study the concept of social capital',
+            'content': '<p>VIZ is not "another crypto", it is a completely new social concept, a new economy and a new kind of relationship between people in modern and future society.</p> <p>To truly understand social capital and prepare for a new era, study the works that formed the basis of VIZ.</p>',
             'notifications': [
                 {
                     'source': 'about.viz.plus/whitepaper',
@@ -316,15 +253,15 @@ export default async (context, locale) => {
                 },
                 {
                     'source': 'about.viz.plus/invest',
-                    'title': 'Third Activity Theory and VIZ',
-                    'link': 'https://about.viz.plus/invest/#%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0% B0%D0%B4%D0%BE-%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2 %D0%B0%D1%82%D1%8C-%D0%B2-%D0%B2%D0%B8%D0%B7',
+                    'title': 'Theory of the Third Activity and VIZ',
+                    'link': 'https://about.viz.plus/invest/',
                 },
             ]
         },
         {
             'name': 'Tokens',
-            'title': 'Buy or sell viz',
-            'content': '<p>It`s quick and easy to increase your digital social capital by purchasing the required number of VIZs on the free market.</p> <p>More capital will increase your influence in the ecosystem, use it before the tokens go up in price. You can just as easily and quickly sell viz tokens if you decide to monetize your social capital.</p> <p>In the VIZ ecosystem, platforms are spontaneously developing where buyers and sellers of VIZs find each other.</p> <p>Recall , there is no administration or main company in VIZ, all relations between ecosystem participants are their own business, they are not controlled by anyone, and all transactions are irreversible. Choose partners carefully and try to control risks.</p> ',
+            'title': 'Buy or sell VIZ',
+            'content': '<p>You can increase your digital social capital quickly and easy by buying the necessary number of VIZ tokens on the free market.</p> <p>A large capital will increase your influence in the ecosystem, use it until the tokens have risen in price. It is also easy and fast to sell VIZ tokens if you decide to monetize your social capital.</p> <p>In VIZ ecosystem, platforms are spontaneously developing, so buyers and sellers of VIZs find each other.</p> <p>Remember that there is no administration or main company in VIZ, all relations between ecosystem participants are their personal business, they are not controlled by anyone and all transactions are irreversible. Choose partners carefully and try to manage the risks.</p> ',
             'notifications': [
                 {
                     'source': 'menaskop.xyz',
@@ -333,17 +270,17 @@ export default async (context, locale) => {
                 },
                 {
                     'source': 'telegram',
-                    'title': 'Direct trades in viz+trade chat',
+                    'title': 'Direct transactions in viz+trade chat',
                     'link': 'https://t.me/vizplus_trade',
                 },
                 {
                     'source': 'viz.media',
-                    'title': 'Viz.media Receipt Shop',
+                    'title': 'Check store on viz.media',
                     'link': 'https://viz.media/shop/',
                 },
                 {
                     'source': 'market.rudex.org',
-                    'title': 'Decentralized Exchange RuDEX',
+                    'title': 'RuDEX Decentralized Exchange',
                     'link': 'https://market.rudex.org/#/market/XCHNG.VIZ_XCHNG.USDT',
                 },
                 {
@@ -354,58 +291,58 @@ export default async (context, locale) => {
             ]
         },
         {
-            'name': 'Participation in development',
-            'title': 'Be useful!',
-            'content': '<p>If you are a developer, designer, translator, entrepreneur, investor, blogger, journalist, or just an active person who knows how to do something useful, you can help develop VIZ, and VIZ will help you.</p > <p>The VIZ ecosystem has a built-in mechanism to reward those who contribute: the Development Fund, from which you can receive substantial payments with the approval of the community.</p> <p>The story of promoting the idea of ​​​​social capital and its implementation in the form of VIZ is just beginning , there is a lot of work ahead and an ocean of opportunities for initiative people.</p> <p>There is no "administration", "team", "management" and other bosses in VIZ. Only you yourself determine what and how you want to do, without asking anyone for permission. Before you - a new continent, waiting for development, and unlimited opportunities for growth.</p>',
+            'name': 'Take part in development',
+            'title': 'Bring benefits!',
+            'content': '<p>If you are a developer, designer, translator, entrepreneur, investor, blogger, journalist or just an active person who knows how to do something useful, you can help in the development of VIZ and VIZ will help you.</p> <p>The VIZ ecosystem has a built-in mechanism for encouraging those who benefit: a Development Fund from which one can receive substantial payments with an approval of the community.</p> <p>The history of promoting the idea of social capital and its implementation in the form of a VIZ is just the beginning, there is a lot of work ahead and vast opportunities for creative people.</p> <p>There is no "administration", "team", "directorate" and other bosses in VIZ. Only you determine what and how you want to do, with no necessary permission. Here is a new continent waiting to be explored, and unlimited opportunities to grow.</p>',
             'notifications': [
                 {
                     'source': 'about.viz.plus/biz/',
-                    'title': 'Business in VIZ',
+                    'title': 'Business with VIZ',
                     'link': 'https://about.viz.plus/biz/',
                 },
                 {
                     'source': 'telegram',
-                    'title': 'Advice for Active Members',
+                    'title': 'Consultations for active telegram participants',
                     'link': 'https://t.me/adm_viz_plus',
                 },
             ],
         },
         {
             'name': 'VIZ+ Initiative',
-            'title': 'Helping VIZ grow',
-            'content': '<p>The VIZPLUS initiative is a private non-profit project. We design, order, finance development and support the operation of key services for VIZ participants.</p> <p>We maintain VIZ blockchain nodes - both full public and several delegate ones. We also help spread the word about VIZ, attract developers and investors to VIZ.</p> ',
-            'after_content': '<p>If you`re into software development, web design, translation, social and messenger bots, interfaces, etc. and are interested in developing the VIZ ecosystem, we are ready to discuss cooperation options with you.</p> <p>If you represent large communities and want to connect to the social capital ecosystem before competitors, please contact us for advice and technical support. We will provide ready-made solutions or develop them especially for you, and we will also delegate a large amount of social capital to develop your community.</p>',
+            'title': 'We help to develop VIZ',
+            'content': '<p>The VIZPLUS initiative is a private non-profit project. We design, order, finance the development and support the operation of key services for VIZ participants.</p> <p>We maintain VIZ blockchain nodes. We also help to disseminate information about VIZ, attract developers and investors to VIZ.</p>',
+            'after_content': '<p>If you are engaged in software development, web design, translations, bots for social networks and messengers, interfaces, etc. and are interested in the development of VIZ ecosystem, we are ready to discuss cooperation options with you.</p> <p>If you represent large communities and want to connect to the ecosystem of social capital ahead of competitors, contact us for advice and technical support. We will provide ready-made solutions or develop them specifically for you, as well as delegate a large amount of social capital to accelerate the community.</p>',
             'slider': [
                 {
                     'title': 'First account',
-                    'subtitle': 'Quick and anonymous account creation',
+                    'subtitle': 'Quick and anonymous Sign Up',
                     'name': 'start.VIZ+',
                     'link': 'start.viz.plus',
-                    'content': 'Easy and secure way to create your first VIZ account. You do not have to provide the service with any personal information, and your keys are not transmitted to the server.',
+                    'content': 'A simple and secure way to create your first VIZ account. You will not have to tell the service any personal information and your keys are not transmitted to the server.',
                     'bg': '#FF8B71'
                 },
                 {
-                    'title': 'Knowledge Base',
-                    'subtitle': 'Instructions, tips, tricks, examples',
+                    'title': 'Data base',
+                    'subtitle': 'Instructions, tips, recommendations, examples',
                     'name': 'about.VIZ+',
                     'link': 'about.viz.plus',
-                    'content': 'Required information for social capital owners, developers, entrepreneurs and investors. Theory and practice of VIZ for those who want to know more.',
+                    'content': 'Necessary information for owners of social capital, developers, entrepreneurs and investors. VIZ theory and practice for those who want to learn more.',
                     'bg': '#83A5EC',
                 },
                 {
-                    'title': 'My Account',
-                    'subtitle': 'Account management apps',
+                    'title': 'Private Office',
+                    'subtitle': 'Account Management Apps',
                     'name': 'my.VIZ+',
                     'link': 'my.viz.plus',
-                    'content': 'Your personal account in VIZ. Almost all blockchain functions in a simple and understandable interface. Works both as a website and as a standalone web application with direct access to the blockchain.',
+                    'content': 'Your Private Office in VIZ. Almost all functions of the blockchain in a simple and clear interface. It works both as a website and as a standalone web application with direct access to the blockchain.',
                     'bg': '#62D0A1'
                 },
                 {
-                    'title': 'Browser',
-                    'subtitle': 'Parameters and state of blockchain and accounts',
+                    'title': 'Blockchain Explorer',
+                    'subtitle': 'Parameters and status of the blockchain and accounts',
                     'name': 'info.VIZ+',
                     'link': 'info.viz.plus',
-                    'content': 'Up-to-date data on the state of the VIZ blockchain, economy parameters, activity graphs. History of account transactions. Information about the delegates VIZa. Block explorer.',
+                    'content': 'Up-to-date data about VIZ blockchain, economic parameters, activity charts. History of account operations. Information about VIZ delegates. Block explorer.',
                     'bg': '#EFB98C'
                 }
             ]
@@ -419,21 +356,21 @@ export default async (context, locale) => {
             'link': 'https://start.viz.plus/',
         },
         {
-            'name': 'My Account',
+            'name': 'Private Office',
             'link': 'https://my.viz.plus/',
         },
         {
-            'name': 'Knowledge Base',
+            'name': 'Data base',
             'link': 'https://about.viz.plus/',
         },
         {
-            'name': 'Browser',
+            'name': 'Explorer',
             'link': 'https://info.viz.plus/',
         },
     ];
     let footer_links = [
         {
-            'name': 'Telegram for questions',
+            'name': 'Telegram',
             'link': 'https://t.me/adm_viz_plus'
         },
     ];
