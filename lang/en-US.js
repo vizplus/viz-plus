@@ -105,7 +105,7 @@ export default async (context, locale) => {
     let advantages = [
         {
             'title': 'accounts_30',
-            'subtitle': 'active <br>users in 30nbsp;days'
+            'subtitle': 'active <br>users in 30&nbsp;days'
         },
         {
             'title': 'trx_1',
